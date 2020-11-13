@@ -1,0 +1,79 @@
+
+
+<div class="user-wrapper">
+  <div class="left-wrapper">
+  <div class="edit-icons">
+    <% if  user_signed_in? && @user == current_user %>
+      <%= image_tag 'edit-icon.png'%>
+      <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
+        /
+      <%= link_to '削除', user_path(current_user),method: :delete %>
+    <% end %>
+  </div>
+  <div class="go-room">
+    <% if user_signed_in? && @user == current_user %>
+      <%= image_tag 'chat_icon.png'%>
+      <%= link_to "チャットルームへ移動する", rooms_path %>
+    <% end %>
+  </div>
+  </div>
+  <div class="main-wrapper">
+  <div class="user-table">
+    <div class="user-image">
+      <% if @user.image.attached? %>
+        <%= image_tag @user.image %>
+      <% else %>
+        <%= image_tag 'profile_icon.png' %>
+      <% end %>
+    </div>
+
+
+    <div class="user-name">
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </div>
+    <div class="user-skill">
+      スキル
+      <h4>
+        <%= @user.skill %>
+      </h4>
+    </div>
+    <div class="user-position">
+      所属
+      <h4>
+        <%= @user.position %>
+      </h4>
+    </div>
+    <div class="user-profile">
+      プロフィール
+      <p>
+        <%= @user.profile %>
+      </p>
+    </div>
+    </div>
+    <div class="user-post-list">
+      <h1>
+        <%= @user.name %>の投稿一覧
+      </h1>
+    </div>
+    <div class="user-seed-contents-lists">
+      <% @seeds.each do |seed| %>
+        <%= link_to seed_path(seed.id) do %>
+          <ul class='post-lists'>
+            <li class='post-list'>
+              <div class="seed-tag-title">
+                <%= seed.tag.name %>
+                /
+                <%= seed.title %>
+              </div>
+              <div class="seed-image" >
+                <%= image_tag seed.image if seed.image.attached? %>
+              </div>
+            </li>
+          </ul>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ideas</title>
+    <title>Seedeas</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <%= render "shared/header"%>
     <%= yield %>
+    <%= render "shared/footer"%>
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        centeredSlides: true,
+        spaceBetween: 8,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          stopOnLastSlide: false,
+	    	  disableOnInteraction: false,
+		      reverseDirection: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+		      clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+    </script>
   </body>
 </html>

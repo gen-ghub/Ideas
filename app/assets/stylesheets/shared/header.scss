@@ -1,0 +1,154 @@
+$cWhite: white;
+$cBlack: black;
+$cYellowgreen:yellowgreen;
+$cSkyblue:#3ccace;
+
+header *{
+  box-sizing: border-box;
+}
+
+
+.header-icon{
+  .btn {
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+    font-weight: 700;
+    perspective: 300px;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+
+
+      & span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 48px;
+        text-align: center;
+        transition: all 0.3s;
+        transform-origin: center center -25px;
+
+      }
+
+      & .post {
+        &-default {
+        background-color: $cYellowgreen;
+        color: $cWhite;
+        transform: rotateX(0);
+      }
+        &:hover {
+          background-color: $cWhite;
+          color: $cYellowgreen;
+        }
+      }
+
+      & .logaut {
+        &-default {
+        background-color: $cYellowgreen;
+        color: $cWhite;
+        transform: rotateX(0);
+      }
+        &:hover {
+          color:$cYellowgreen ;
+        }
+      }
+
+      & .hovering {
+        background-color:$cYellowgreen;
+        color: $cWhite;
+        transform: rotateX(90deg);
+      }
+
+      & .default {
+        background-color: $cYellowgreen;
+        color: $cWhite;
+        transform: rotateX(0);
+      }
+
+      &:hover {
+        & .hovering {
+          transform: rotateX(0);
+        }
+        & .default {
+          transform: rotateX(-90deg);
+        }
+      }
+  }
+}
+
+
+
+.header {
+  width: 100vw;
+  padding: 10px 10px;
+  background-color: $cYellowgreen;
+}
+
+.heder-wrapper{
+  display: flex;
+  & .left-wrapper{
+    display: flex;
+  }
+
+}
+
+.logo{
+  width: 14vw;
+}
+
+.logo-btn{
+  padding: 1rem 2rem;
+  border-top: 6px double $cWhite;
+  border-bottom: 6px double $cWhite;
+}
+
+
+.logo-icon{
+  text-align: center;
+  letter-spacing: 4px;
+  font-stretch: condensed;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  width: 50vw;
+  height: 5vh;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+
+.search-btn {
+  display: inline-block;
+  font-weight: 700;
+  perspective: 300px;
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius:5px;
+  background-color: $cYellowgreen;
+  color: $cWhite;
+  border: 2px solid $cWhite;
+  &:hover{
+    background-color: rgb(168, 238, 150);
+  }
+}
+
+
