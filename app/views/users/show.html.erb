@@ -57,18 +57,18 @@
         <%= @user.name %>の投稿一覧
       </h1>
     </div>
-    <div class="user-seed-contents-lists">
-      <% @seeds.each do |seed| %>
-        <%= link_to seed_path(seed.id) do %>
+    <div class="user-idea-contents-lists">
+      <% @ideas.each do |idea| %>
+        <%= link_to idea_path(idea.id) do %>
           <ul class='post-lists'>
             <li class='post-list'>
-              <div class="seed-tag-title">
-                <%= seed.tag.name %>
+              <div class="idea-tag-title">
+                <%= idea.tag.name %>
                 /
-                <%= seed.title %>
+                <%= idea.title %>
               </div>
-              <div class="seed-image" >
-                <%= image_tag seed.image if seed.image.attached? %>
+              <div class="idea-image" >
+                <%= image_tag idea.image if idea.image.attached? %>
               </div>
             </li>
           </ul>
