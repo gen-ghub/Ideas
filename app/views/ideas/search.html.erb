@@ -1,0 +1,31 @@
+<div class="search-main">
+  <div class="search-wrapper-title">
+    <h2>検索結果一覧</h2>
+  </div>
+<div class="search-wrapper">
+  <div class="search-wrapper-left">
+  </div>
+  <div class="search-wrapper-main">
+      <div class="idea-contents-lists">
+        <ul class='post-lists'>
+          <% @ideas.each do |idea| %>
+            <li class='post-list'>
+              <%= link_to idea_path(idea.id) do %>
+                <div class="idea-image" >
+                  <%= image_tag idea.image if idea.image.attached? %>
+                </div>
+              <% end %>
+                <div class="idea-title">
+                  <%= idea.title %>
+                </div>
+                <div class="idea-tag">
+                  <%= idea.tag.name %>
+                </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+  <div class="search-wrapper-right">
+  </div>
+</div>

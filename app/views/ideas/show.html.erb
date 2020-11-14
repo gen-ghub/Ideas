@@ -1,0 +1,53 @@
+
+<div class="idea-show-main">
+  <div class="idea-show-wrapper">
+    <div class="idea-show-left">
+    <% if user_signed_in? %>
+      <div class="new-room-btn">
+        <%= image_tag 'room.png'%>
+        <%= link_to "ルームを作成", new_room_path %>
+      </div>
+    <% end %>
+
+        <% if user_signed_in? %>
+          <% if @idea.user.id == current_user.id %>
+          <div class="edit-idea-btn">
+            <%= image_tag 'edit-icon.png'%>
+            <%= link_to '投稿の編集', edit_idea_path(@idea.id), method: :get, class: "idea-red-btn" %>
+          </div>
+          <div class="delete-idea-btn">
+            <%= image_tag 'delete.png'%>
+            <%= link_to '投稿を削除', idea_path(@idea.id), method: :delete, class:'idea-destroy' %>
+          </div>
+          <% end %>
+        <% end %>
+    </div>
+
+    <div class="idea-show-center">
+      <div class="idea-box">
+        <div class="idea-tag-box">
+          <span class="idea-tag">
+            <%= @idea.tag.name %>
+          </span>
+        </div>
+        <h2 class="title">
+          <%= @idea.title %>
+        </h2>
+        <div class='idea-img-content'>
+          <%= image_tag @idea.image ,class:"idea-box-img" if @idea.image.attached? %>
+        </div>
+        <div class="idea-idea-box">
+          <p class="idea-text">
+            <%= @idea.text %>
+          </p>
+        </div>
+        <div class="idea-user">
+            投稿者 <%= link_to @idea.user.name, user_path(@idea.user.id) %>
+        </div>
+      </div>
+
+    </div>
+    <div class="idea-show-right">
+    </div>
+  </div>
+</div>

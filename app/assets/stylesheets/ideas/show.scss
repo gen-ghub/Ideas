@@ -1,0 +1,89 @@
+$cWhite: white;
+$cBlack:black;
+
+
+.idea-show-main{
+  background-color: rgba(207, 250, 87, 0.473);
+}
+
+
+.idea-show-wrapper{
+  display: flex;
+  text-align: center;
+
+  & .idea-show-left{
+    width: 15vw;
+    height: 90vh;
+
+    .new-room-btn {
+      position: absolute;
+      top: 10vh;
+      left: 1vw;
+      & img {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+      }
+      & a {
+        color: $cBlack;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .edit-idea-btn {
+      position: absolute;
+      top: 15vh;
+      left: 1vw;
+      & img {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+      }
+      & a {
+        color: $cBlack;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .delete-idea-btn {
+      position: absolute;
+      top: 20vh;
+      left: 1vw;
+      & img {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+      }
+      & a {
+        color: $cBlack;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  & .idea-show-right{
+    width: 15vw;
+    height: 90vh;
+  }
+  & .idea-show-center{
+    width: 70vw;
+    padding-top: 100px;
+    & .idea-tag{
+      font-size: 60px;
+    }
+    & h2{
+      font-size: 50px;
+      color: $cBlack;
+      padding: 20px;
+    }
+    & .idea-box-img{
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+    }
+    & .idea-user{
+      padding: 20px;
+    }
+  }
+}

@@ -47,7 +47,7 @@ Things you may want to cover:
 | --------------- | ---------- | ----------------------------- |
 | title           | string     | null: false                   |
 | tag             | string     | null: false                   |
-| idea            | text       | null: false                   |
+| text            | text       | null: false                   |
 | user            | references | null: false, foreign_key: true|
 
 ### Association

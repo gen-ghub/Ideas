@@ -1,0 +1,32 @@
+
+
+  <div class="idea-edit-main">
+    <h2 class="idea-edit-title">投稿の情報を入力</h2>
+    <%= form_with model: @idea, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="img-upload">
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"idea-image" %>
+      </div>
+    </div>
+    <div class="edit-idea-title">
+      <%= f.text_field :title, class:"title-text", placeholder:"タイトル" %>
+    </div>
+    <div>
+      <%= f.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+    <div class="edit-idea-text">
+      <%= f.text_area :text, class:"idea-text", placeholder: "idea", rows: "10" %>
+    </div>
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', idea_path(@idea.id), class:"back-btn" %>
+    </div>
+    <% end %>
+  </div>
+

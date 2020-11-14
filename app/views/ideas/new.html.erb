@@ -1,0 +1,22 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @idea, local: true) do |form| %>
+    <%= render 'shared/error_messages', model: form.object %>
+      <%= form.text_field :title, placeholder: "タイトル" %>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= form.file_field :image, id:"item-image" %>
+      </div>
+      <div>
+      <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      <div>
+      <%= form.text_area :text, placeholder: "投稿の説明文を入力", rows: "10" %>
+      </div>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
