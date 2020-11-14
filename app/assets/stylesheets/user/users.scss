@@ -1,0 +1,107 @@
+
+$cWhite: white;
+$cProfile:black;
+$cBlack:black;
+
+.user-wrapper {
+background-color: rgba(207, 250, 87, 0.473);
+text-align: center;
+}
+
+
+.edit-icons {
+  position: absolute;
+  top: 10vh;
+  left: 1vw;
+  & img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+  & a {
+    color: $cBlack;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.go-room {
+  position: absolute;
+  top: 17vh;
+  left: 1vw;
+  & img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+  & a {
+    color: $cBlack;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+.user-table{
+  color: $cProfile;
+  border-bottom: 4px solid $cBlack;
+  & h4{
+    padding: 30px;
+  }
+  & .user-name{
+    margin-bottom: 100px;
+  }
+  & .user-profile p{
+    padding: 30px;
+
+
+  }
+}
+
+.user-image{
+
+  & img{
+    margin: 70px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.user-post-list{
+  height: 10vh;
+  width: 80vw;
+  margin: auto;
+  & h1{
+    font-size: 30px;
+    padding: 40px;
+  }
+  & .user-post-wrapper{
+
+  }
+}
+
+
+.user-seed-contents-lists {
+  width: 70vw;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  & .post-lists {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    & .post-list{
+      padding: 3vh 2vw;
+    }
+
+    & li div{
+      color: $cBlack;
+    }
+  }
+  & .seed-image img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+}
