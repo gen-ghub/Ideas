@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_11_14_005851) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
     t.bigint "room_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

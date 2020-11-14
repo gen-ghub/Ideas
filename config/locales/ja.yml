@@ -7,10 +7,12 @@ ja:
         skill: スキル
         position: 所属
         profile: プロフィール
-      seed:
+      idea:
         title: タイトル
-        idea: アイデア
+        text: アイデア
         tag_id: カテゴリ
+      room:
+        name: チャットルーム名
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
