@@ -27,10 +27,28 @@
 
 </div>
 
-<div class="seed-contents">
-  <div class="seed-contents-title">
+<div class="idea-contents">
+  <div class="idea-contents-title">
     <h1><span>募集・提案　投稿一覧</span></h1>
   </div>
 
-  
+  <div class="idea-contents-lists">
+    <ul class='post-lists'>
+      <% @ideas.each do |idea| %>
+        <li class='post-list'>
+          <%= link_to idea_path(idea.id) do %>
+            <div class="idea-image" >
+              <%= image_tag idea.image if idea.image.attached? %>
+            </div>
+          <% end %>
+            <div class="idea-title">
+              <%= idea.title %>
+            </div>
+            <div class="idea-tag">
+              <%= idea.tag.name %>
+            </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

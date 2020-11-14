@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-11-06T10:30:41.776Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="IXKKfgE_TZdeCr8oN9jl" version="13.6.5">
+<mxfile host="65bd71144e" modified="2020-11-14T00:30:36.168Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="vQZMEdhPXWLNYJYX1fzm" version="13.6.5">
     <diagram id="nzXN5QlKIVG1GLNE_rwd" name="ページ1">
-        <mxGraphModel dx="298" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="184" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -37,7 +37,7 @@
                 <mxCell id="27" value="user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="25" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="room" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="25">
+                <mxCell id="43" value="room" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="25" vertex="1">
                     <mxGeometry y="56" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="" style="endArrow=ERoneToMany;html=1;rounded=0;strokeColor=#f0f0f0;startArrow=ERmandOne;startFill=0;endSize=20;endFill=0;startSize=20;jumpSize=20;" parent="1" edge="1">
@@ -70,13 +70,13 @@
                 <mxCell id="11" value="tag" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
                     <mxGeometry y="56" width="180" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="idea" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
+                <mxCell id="12" value="text" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
                     <mxGeometry y="86" width="180" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
                     <mxGeometry y="116" width="180" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="" style="endArrow=ERoneToMany;html=1;rounded=0;strokeColor=#f0f0f0;startArrow=ERmandOne;startFill=0;endSize=20;endFill=0;startSize=20;jumpSize=20;entryX=1.013;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.181;exitY=1.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="21" edge="1" source="17">
+                <mxCell id="40" value="" style="endArrow=ERoneToMany;html=1;rounded=0;strokeColor=#f0f0f0;startArrow=ERmandOne;startFill=0;endSize=20;endFill=0;startSize=20;jumpSize=20;entryX=1.013;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.181;exitY=1.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="17" target="21" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="630" y="180" as="sourcePoint"/>
                         <mxPoint x="790" y="210" as="targetPoint"/>

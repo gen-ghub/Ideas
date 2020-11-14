@@ -4,7 +4,7 @@ $cYellowgreen:yellowgreen;
 $cSkyblue:#3ccace;
 
 
-.seed-contents-lists {
+.idea-contents-lists {
   width: 70vw;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ $cSkyblue:#3ccace;
       color: $cBlack;
     }
   }
-  & .seed-image img{
+  & .idea-image img{
     height: 300px;
     width: 300px;
     object-fit: cover;

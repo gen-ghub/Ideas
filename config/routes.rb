@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   get '/mypage' => 'users#mypage'
   resources :users, only: [:show, :edit, :update, :destroy]
 
-  resources :ideas
+  resources :ideas do
+    collection do
+      get 'search'
+    end
+  end
 end

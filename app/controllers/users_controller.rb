@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @seeds = Seed.where(user_id: @user.id)
+    @ideas = Idea.where(user_id: @user.id)
   end
 
   def edit
