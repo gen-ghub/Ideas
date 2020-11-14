@@ -1,0 +1,31 @@
+$cWhite: white;
+$cBlack: black;
+$cYellowgreen:yellowgreen;
+$cSkyblue:#3ccace;
+
+
+.seed-contents-lists {
+  width: 70vw;
+  flex-direction: column;
+  align-items: center;
+  & .post-lists {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    & .post-list{
+      padding: 3vh 2vw;
+    }
+
+    & li div{
+      color: $cBlack;
+    }
+  }
+  & .seed-image img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+}
+
