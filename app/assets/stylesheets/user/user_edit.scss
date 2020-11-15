@@ -1,0 +1,93 @@
+
+$cWhite: white;
+$cBlack:black;
+
+.back{
+  background-color: rgba(207, 250, 87, 0.473);
+  height: 100vh;
+}
+.user-edit-display {
+  & header{
+  display: none;
+  }
+  & footer{
+    display: none;
+  }
+}
+.hoom-icon{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.user-edit-wrapper{
+  & h1 {
+
+    padding: 5px;
+    margin: 70px 20vw 20px 20vw;
+    display: inline-block;
+    font-size: 30px;
+  }
+}
+
+
+.user-edit-main {
+
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+  & .account-details{
+    margin: 0 50px;
+  }
+
+  & .profile-details {
+    position: relative;
+    margin: 0 50px;
+
+    & .user-edit-skii{
+      width: 400px;
+    }
+    & .user-edit-profile{
+      width: 400px;
+      height: 200px;
+    }
+    & div {
+      color: $cBlack;
+      font-size: 20px;
+    }
+    & .img-upload{
+
+      & #image-list{
+        height: 150px;
+        width: 150px;
+        position: absolute;
+
+        left: 300px;
+        & img {
+          height: 150px;
+          width: 150px;
+          object-fit: cover;
+          border: 2px solid $cBlack;
+        }
+      }
+    }
+  }
+}
+
+.user-edit-btn{
+  text-align: center;
+  & input{
+    padding: 10px 50px ;
+    background-color: powderblue;
+    font-size: 20px;
+  }
+}
+
+.user-edit-back-btn{
+  text-align: center;
+  margin: 20px;
+  & a{
+    padding: 5px 20px ;
+
+  }
+}

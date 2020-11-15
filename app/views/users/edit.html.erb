@@ -1,61 +1,79 @@
-<h1>プロフィール編集</h1>
-
-<%= form_with model: @user, local: true do |f| %>
-  <%= render "shared/error_messages", model: f.object %>
-    <div class="img-upload">
-      <div class="img-upload-text">
-        プロフィール画像
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :user_image, id:"user-image" %>
-      </div>
-    </div>
-
-   <div class="field">
-    <%= f.label :name %><br/>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <div class="field">
-    <%= f.label :password %> <i>(変更しない場合は空欄のままにしてください)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> 文字以上で入力してください</em>
+<body class="user-edit-display back">
+  <div class="hoom-icon">
+    <%= link_to root_path do%>
+      <%= image_tag 'hoom-icon.png'%>
     <% end %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="user-edit-wrapper">
+      <h1>アカウント情報編集</h1>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(変更を確認するには現在のパスワードが必要です)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-  <div class="field">
-    <%= f.label :skill %><br/>
-    <%= f.text_field :skill, autofocus: true, autocomplete: "特技や仕事など" %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br/>
-    <%= f.text_field :position, autofocus: true, autocomplete: "個人、企業など" %>
-  </div>
-  <div class="field">
-    <%= f.label :profile %><br/>
-    <%= f.text_area :profile, autofocus: true, autocomplete: "自己紹介文を書いてください" %>
-  </div>
+        <%= form_with model: @user, local: true do |f| %>
+          <%= render "shared/error_messages", model: f.object %>
+          <div class="user-edit-main">
+          <div class="account-details">
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="field">
+              <%= f.label :current_password %> <i>(変更時、現在のパスワードが必要です)</i><br/>
+              <%= f.password_field :current_password, autocomplete: "current-password" %>
+            </div>
+            <div class="field">
+              <%= f.label :password %> <i>(変更しない場合は空欄のままにしてください)</i><br/>
+              <%= f.password_field :password, autocomplete: "new-password" %>
+              <% if @minimum_password_length %>
+                <br/>
+                <em><%= @minimum_password_length %> 文字以上で入力してください</em>
+              <% end %>
+            </div>
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+          </div>
+          <div class="profile-details">
+            <div class="img-upload">
+              <div class="img-upload-text">
+                プロフィール画像
+              </div>
+                <div class="click-upload">
+                  <p>クリックしてファイルをアップロード</p>
+                  <%= f.file_field :image, id:"user-image" %>
+                </div>
+                <div id="image-list"></div>
+            </div>
+            <div class="field">
+              <%= f.label :name %><br/>
+              <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+            </div>
+            <div class="field">
+              <%= f.label :position %><br/>
+              <%= f.text_field :position, autofocus: true, autocomplete: "個人、企業など" %>
+            </div>
+            <div class="field">
+              <%= f.label :skill %><br/>
+              <%= f.text_field :skill, autofocus: true, autocomplete: "特技や仕事など",class:"user-edit-skii" %>
+            </div>
+            <div class="field">
+              <%= f.label :profile %><br/>
+              <%= f.text_area :profile, autofocus: true, autocomplete: "自己紹介文を書いてください",class:"user-edit-profile" %>
+            </div>
+          </div>
+          <div>
+          </div>
+          </div>
+          <div class="user-edit-btn">
+            <%= f.submit "保存" %>
+          </div>
+        <% end %>
 
-  <div>
-    <%= f.submit "保存" %>
+
+    </div>
+  <div class="user-edit-back-btn">
+
+    <%= link_to image_tag("back-icon.png"), :back %>
   </div>
-<% end %>
+</body>
 
 
-<%= link_to "戻る", :back %>

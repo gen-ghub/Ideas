@@ -1,0 +1,76 @@
+.back{
+  background-color: rgba(207, 250, 87, 0.473);
+  height: 100vh;
+}
+.idea-new-display {
+  & header{
+  display: none;
+  }
+  & footer{
+    display: none;
+  }
+  & h1{
+    text-align: center;
+    padding: 50px;
+  }
+  & .hoom-icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  & .mypage-icon{
+    position: absolute;
+    top: 85px;
+    left: 20px;
+  }
+}
+
+
+.idea-new-wrapper{
+  display: flex;
+
+
+  & .idea-new-left{
+    width: 40vw;
+  }
+
+  & .idea-new-right{
+    & div{
+      margin: 10px;
+    }
+    & input {
+      margin: 10px;
+    }
+    & input[type="text"] {
+      width: 300px;
+      height: 40px;
+    }
+    & .select-box{
+      width: 300px;
+      height: 40px;
+    }
+    & .text-area{
+      width: 300px;
+      height: 300px;
+    }
+    & .click-upload{
+      & input {
+        margin: 0;
+      }
+    }
+    & .idea-new-btn{
+      padding: 5px 20px ;
+      margin: 10px 100px;
+      background-color: powderblue;
+    }
+  }
+}
+
+.idea-new-back-btn{
+  text-align: center;
+  margin: 20px;
+  & a{
+    padding: 5px 20px ;
+
+  }
+}

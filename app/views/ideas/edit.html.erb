@@ -1,32 +1,49 @@
-
-
-  <div class="idea-edit-main">
-    <h2 class="idea-edit-title">投稿の情報を入力</h2>
-    <%= form_with model: @idea, local: true do |f| %>
-
-    <%= render 'shared/error_messages', model: f.object %>
-    <div class="img-upload">
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"idea-image" %>
-      </div>
-    </div>
-    <div class="edit-idea-title">
-      <%= f.text_field :title, class:"title-text", placeholder:"タイトル" %>
-    </div>
-    <div>
-      <%= f.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-    </div>
-    <div class="edit-idea-text">
-      <%= f.text_area :text, class:"idea-text", placeholder: "idea", rows: "10" %>
-    </div>
-    </div>
-    <div class="sell-btn-contents">
-      <%= f.submit "変更する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', idea_path(@idea.id), class:"back-btn" %>
-    </div>
+<body class="idea-edit-display back">
+  <h1>投稿する</h1>
+  <div class="hoom-icon">
+    <%= link_to root_path do%>
+      <%= image_tag 'hoom-icon.png'%>
     <% end %>
   </div>
+  <div class="mypage-icon">
+    <%= link_to mypage_path(current_user.id) do%>
+      <%= image_tag 'mypage-icon.png'%>
+    <% end %>
+  </div>
+  <div class="idea-edit-wrapper">
+    <div class="idea-edit-left">
+    </div>
+
+    <div class="idea-edit-main">
+      <%= form_with model: @idea, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="edit-idea-title">
+        <%= f.text_field :title, class:"title-text" %>
+      </div>
+      <div class="img-upload">
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"idea-image" %>
+          <div id="image-list"></div>
+        </div>
+      </div>
+        <div>
+          <%= f.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        </div>
+        <div class="edit-idea-text">
+          <%= f.text_area :text, class:"idea-text", rows: "10" %>
+        </div>
+        <div>
+          <%= f.submit "変更する" ,class:"idea-edit-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="idea-new-back-btn">
+      <%= link_to image_tag("back-icon.png"), :back %>
+  </div>
+</div>
+</body>
 
