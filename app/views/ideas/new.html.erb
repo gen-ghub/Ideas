@@ -1,22 +1,39 @@
-<div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
-    <%= form_with(model: @idea, local: true) do |form| %>
-    <%= render 'shared/error_messages', model: form.object %>
-      <%= form.text_field :title, placeholder: "タイトル" %>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= form.file_field :image, id:"item-image" %>
-      </div>
-      <div>
-      <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-      </div>
-      <div>
-      <%= form.text_area :text, placeholder: "投稿の説明文を入力", rows: "10" %>
-      </div>
-      <%= form.submit "SEND" %>
+<body class="idea-new-display back">
+  <h1>投稿する</h1>
+  <div class="hoom-icon">
+    <%= link_to root_path do%>
+    <%= image_tag 'hoom-icon.png'%>
     <% end %>
   </div>
-</div>
+  <div class="mypage-icon">
+    <%= link_to mypage_path(current_user.id) do%>
+    <%= image_tag 'mypage-icon.png'%>
+    <% end %>
+  </div>	  <div class="idea-new-wrapper">
+      <div class="idea-new-left">
+      </div>
+      <div class="idea-new-right">
+            <%= form_with(model: @idea, local: true) do |form| %>
+            <%= render 'shared/error_messages', model: form.object %>
+              <%= form.text_field :title, placeholder: "タイトル" %>
+              <div class="click-upload">
+                <p>
+                  クリックしてファイルをアップロード
+                </p>
+                <%= form.file_field :image, id:"idea-image" %>
+                <div id="image-list"></div>
+              </div>
+              <div>
+              <%= form.collection_select(:tag_id, Tag.all, :id, :name, {}, {class:"select-box", id:"idea-category"}) %>
+              </div>
+              <div>
+              <%= form.text_area :text, placeholder: "投稿の説明文を入力", rows: "10", class:"text-area" %>
+              </div>
+              <%= form.submit "投稿する",class:"idea-new-btn" %>
+            <% end %>
+      </div>
+    </div>
+    <div class="idea-new-back-btn">
+      <%= link_to image_tag("back-icon.png"), :back %>
+    </div>
+</body>
