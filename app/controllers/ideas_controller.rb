@@ -3,7 +3,7 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   def index
-    @ideas = Idea.order("created_at DESC")
+    @ideas = Idea.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new
