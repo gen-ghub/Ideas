@@ -3,7 +3,7 @@ $cBlack:black;
 
 .back{
   background-color: rgba(207, 250, 87, 0.473);
-  
+
 }
 .user-edit-display {
   & header{
@@ -14,7 +14,7 @@ $cBlack:black;
   }
 }
 .hoom-icon{
-  position: absolute;
+  z-index: 5;
   top: 20px;
   left: 20px;
 }
