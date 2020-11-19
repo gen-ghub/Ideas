@@ -42,7 +42,10 @@
           </p>
         </div>
         <div class="idea-user">
-            投稿者 <%= link_to @idea.user.name, user_path(@idea.user.id) %>
+          <span id="idea_like">
+            <%= render 'like', idea: @idea %>
+          </span>
+            　　　投稿者 <%= link_to @idea.user.name, user_path(@idea.user.id) %>
         </div>
       </div>
 

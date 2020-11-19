@@ -12,9 +12,10 @@
 | profile            | text    |                                |
 
 ### Association
-- has_many :idea
+- has_many :ideas
 - has_many :messages
 - has_many :rooms, through: entries
+- has_many :likes
 
 ## ideas テーブル
 
@@ -26,8 +27,9 @@
 | user            | references | null: false, foreign_key: true|
 
 ### Association
-- belongs_to :users
+- belongs_to :user
 - has_one :room
+- has_many :likes
 
 ## rooms テーブル
 
@@ -68,3 +70,14 @@
 - belongs_to :room
 - belongs_to :user
 
+## likes テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| idea    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :idea
