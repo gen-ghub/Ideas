@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+  <% if idea.user.id == current_user.id %>
+    <td>現在のいいね　<%= idea.likes.count %></td>
+  <% else%>
+    <% if current_user.liked_by?(idea.id) %>
+      <td><%= link_to 'いいねを外す', destroy_like_path(idea), method: :DELETE, remote: true %> <%= idea.likes.count %></td>
+    <% else %>
+      <td><%= link_to 'いいね', create_like_path(idea), method: :POST, remote: true %> <%= idea.likes.count %></td>
+    <% end %>
+ <% end %>
+<% end %>
+

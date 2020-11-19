@@ -40,6 +40,53 @@ text-align: center;
     font-weight: 700;
   }
 }
+
+.like-lists {
+  position: absolute;
+  top: 23vh;
+  left: 1vw;
+  & img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+  & a {
+    color: $cBlack;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.follow-lists{
+  position: absolute;
+  top: 29vh;
+  left: 1vw;
+  & img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+  & a {
+    color: $cBlack;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+.follower-lists{
+  position: absolute;
+  top: 34vh;
+  left: 1vw;
+  & img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+  & a {
+    color: $cBlack;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
 .user-table{
   color: $cProfile;
   border-bottom: 4px solid $cBlack;
@@ -64,6 +111,8 @@ text-align: center;
     width: 300px;
     object-fit: cover;
     border-radius: 50%;
+    border: 1px solid $cBlack;
+    background-color: $cWhite;
   }
 }
 
@@ -81,7 +130,7 @@ text-align: center;
 }
 
 
-.user-seed-contents-lists {
+.user-idea-contents-lists {
   width: 70vw;
   margin: auto;
   align-items: center;
@@ -98,7 +147,7 @@ text-align: center;
       color: $cBlack;
     }
   }
-  & .seed-image img{
+  & .idea-image img{
     height: 300px;
     width: 300px;
     object-fit: cover;

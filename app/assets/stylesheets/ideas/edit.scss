@@ -13,18 +13,17 @@
     text-align: center;
     padding: 50px;
   }
-
+  & .hoom-icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
 
   & .mypage-icon{
-
+    position: absolute;
     top: 85px;
     left: 20px;
   }
-}
-.hoom-icon{
-
-  top: 20px;
-  left: 20px;
 }
 
 .idea-edit-wrapper{

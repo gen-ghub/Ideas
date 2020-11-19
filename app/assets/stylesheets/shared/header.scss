@@ -67,6 +67,11 @@ header *{
         background-color: $cYellowgreen;
         color: $cWhite;
         transform: rotateX(0);
+        & img{
+          height: 70px;
+          width: 160px;
+          object-fit: cover;
+        }
       }
 
       &:hover {
@@ -102,8 +107,8 @@ header *{
 
 .logo-btn{
   padding: 1rem 2rem;
-  border-top: 6px double $cWhite;
-  border-bottom: 6px double $cWhite;
+
+
 }
 
 

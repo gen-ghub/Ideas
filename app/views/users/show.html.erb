@@ -2,20 +2,38 @@
 
 <div class="user-wrapper">
   <div class="left-wrapper">
-  <div class="edit-icons">
-    <% if  user_signed_in? && @user == current_user %>
-      <%= image_tag 'edit-icon.png'%>
-      <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
-        /
-      <%= link_to '削除', user_path(current_user),method: :delete %>
-    <% end %>
-  </div>
-  <div class="go-room">
-    <% if user_signed_in? && @user == current_user %>
-      <%= image_tag 'chat_icon.png'%>
-      <%= link_to "チャットルームへ移動する", rooms_path %>
-    <% end %>
-  </div>
+    <div class="edit-icons">
+      <% if  user_signed_in? && @user == current_user %>
+        <%= image_tag 'edit-icon.png'%>
+        <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
+          /
+        <%= link_to '削除', user_path(current_user),method: :delete %>
+      <% end %>
+    </div>
+    <div class="go-room">
+      <% if user_signed_in? && @user == current_user %>
+        <%= image_tag 'chat_icon.png'%>
+        <%= link_to "チャットルームへ移動する", rooms_path %>
+      <% end %>
+    </div>
+    <div class="like-lists">
+      <% if user_signed_in? && @user == current_user %>
+        <%= image_tag 'good-icon.png'%>
+        <%= link_to "いいねした投稿一覧", root_path %>
+      <% end %>
+    </div>
+    <div class="follow-lists">
+      <% if user_signed_in? && @user == current_user %>
+        <%= image_tag 'follow-icon.png'%>
+        <%= link_to "フォロー", root_path %>
+      <% end %>
+    </div>
+    <div class="follower-lists">
+      <% if user_signed_in? && @user == current_user %>
+        <%= image_tag 'follower-icon.png'%>
+        <%= link_to "フォローワー", root_path %>
+      <% end %>
+    </div>
   </div>
   <div class="main-wrapper">
   <div class="user-table">

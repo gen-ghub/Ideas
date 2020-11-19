@@ -42,11 +42,9 @@
           </p>
         </div>
         <div class="idea-user">
-        <% if current_user.liked_by?(@idea.id) %>
-          <td><%= link_to 'いいねを外す', destroy_like_path(@idea), method: :DELETE %></td>
-        <% else %>
-          <td><%= link_to 'いいね', create_like_path(@idea), method: :POST %></td>
-        <% end %>
+          <span id="idea_like">
+            <%= render 'like', idea: @idea %>
+          </span>
             　　　投稿者 <%= link_to @idea.user.name, user_path(@idea.user.id) %>
         </div>
       </div>
