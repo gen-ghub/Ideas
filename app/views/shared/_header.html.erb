@@ -1,56 +1,35 @@
-<header class='header'>
-  <div class="heder-wrapper">
-    <div class="left-wrapper">
-      <div class="logo">
-        <div class="header-icon logo-icon">
-          <%= link_to root_path do%>
-            <div class="btn logo-btn">
-              <span class="hovering">トップページ</span><span class="default"><%=image_tag 'logo-icon2.png' %></span>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
-      <div class='search-bar-contents'>
-        <%= form_with(url: search_ideas_path, local: true, method: :get, class: "search-form") do |form| %>
+<header>
+  <%= link_to root_path do%>
+    <%=image_tag 'logo-icon2.png', class:"logo" %>
+  <% end %>
+  <ul>
+    <li class='search-bar-contents'>
+      <%= form_with(url: search_ideas_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "input-box" %>
         <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </li>
+    <% if user_signed_in? %>
+      <li class="btn-list">
+        <%= link_to mypage_path(current_user.id) do%>
+          <div class="btn">
+            <span class="hovering">マイページ</span><span class="default"><%= current_user.name %></span>
+          </div>
         <% end %>
-      </div>
-    </div>
-    <div class="right-wrapper">
-      <div class="header-icon">
-        <% if user_signed_in? %>
-          <%= link_to mypage_path(current_user.id) do%>
-            <div class="btn">
-              <span class="hovering">マイページ</span><span class="default"><%= current_user.name %></span>
-            </div>
-          <% end %>
-          <%= link_to destroy_user_session_path, method: :delete do%>
-            <div class="btn">
-              <span class="logaut logaut-default">ログアウト</span>
-            </div>
-          <% end %>
-          <%= link_to new_idea_path do%>
-            <div class="btn">
-              <span class="post post-default">投稿する</span>
-            </div>
-          <% end %>
-        <% else %>
-          <%= link_to new_user_session_path do%>
-            <div class="btn">
-              <span class="hovering">ようこそ</span><span class="default">ログイン</span>
-            </div>
-          <% end %>
-          <%= link_to new_user_registration_path do%>
-            <div class="btn">
-              <span class="hovering">sign-up</span><span class="default">新規登録</span>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+      </li>
+      <li class="link-btn-list">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"link-btn" %>
+      </li>
+      <li class="list-right link-btn-list">
+        <%= link_to '投稿する',new_idea_path, class:"link-btn" %>
+      </li>
+    <% else %>
+      <li class="link-btn-list">
+        <%= link_to 'ログイン', new_user_session_path, class:"link-btn" %>
+      </li>
+      <li class="link-btn-list">
+        <%= link_to '新規登録', new_user_registration_path, class:"link-btn" %>
+      </li>
+    <% end %>
+  </ul>
 </header>
-
-

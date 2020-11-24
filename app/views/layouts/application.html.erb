@@ -22,26 +22,28 @@
     <%= render "shared/footer"%>
     <script>
       var mySwiper = new Swiper ('.swiper-container', {
+        effect: 'fade',
+        speed: 2000,
         centeredSlides: true,
         spaceBetween: 8,
-        slidesPerView: 3,
+        // slidesPerView: 3,
         slidesPerGroup: 1,
         loop: true,
         autoplay: {
-          delay: 4000,
+          delay: 5000,
           stopOnLastSlide: false,
 	    	  disableOnInteraction: false,
 		      reverseDirection: false
         },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-		      clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   type: 'bullets',
+		    //   clickable: true
+        // },
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev'
+        // }
       })
     </script>
   </body>

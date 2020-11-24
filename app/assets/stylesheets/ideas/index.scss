@@ -4,13 +4,16 @@ $cBlack: black;
 $cYellowgreen:yellowgreen;
 $cSkyblue:#3ccace;
 
+.swiper-space{
+  height: 10vh;
+}
 .swiper-container{
-  width: 70vw;
-  margin-top: 10px;
+  width: 100vw;
+  height: 70vh;
 }
 /* 全体のスタイル */
 .swiper-wrapper {
-	height: 400px;
+	height: 100%;
 }
 /* 全スライド共通スタイル */
 .swiper-slide {
@@ -44,23 +47,26 @@ $cSkyblue:#3ccace;
 
 
 .top-explanation{
-  background-color:$cYellowgreen;
+
   width: 70vw;
   height: 400px;
   margin: 50px auto;
 
-  h1{
+  & h1{
    font-size: 50px;
-   color: $cWhite;
+   color: $cBlack;
    text-align: center;
    padding: 30px;
   }
 
-  p{
+  & p{
     font-size: 20px;
-    color: $cWhite;
+    color: $cBlack;
     text-align: center;
     padding: 15px 30px;
+  }
+  & .p-title{
+    font-size: 30px;
   }
 }
 
@@ -72,67 +78,10 @@ $cSkyblue:#3ccace;
 
 .idea-contents-title{
   text-align: center;
-  margin: 20px 0;
+  margin: 100px 0;
   & h1{
     letter-spacing: 10px;
   }
-  position: relative;
-  margin: 30px;
-  text-align: center;
-
-
-&:before,
-&:after {
-  position: absolute;
-  z-index: 0;
-  bottom: -10px;
-  display: block;
-  content: '';
-  border: 1em solid #d90606;
-}
-
-&:before {
-  left: -30px;
-  border-left-width: 15px;
-  border-left-color: transparent;
-}
-
-&:after {
-  right: -30px;
-  border-right-width: 15px;
-  border-right-color: transparent;
-}
-
-& span {
-  position: relative;
-  z-index: 1;
-  display: block;
-  padding: 1rem 2rem;
-  color: #fff;
-  background: #fa4141;
-}
-
-& span:before,
-& span:after {
-  position: absolute;
-  bottom: -10px;
-  display: block;
-  width: 10px;
-  height: 10px;
-  content: '';
-  border-style: solid;
-  border-color: #b70505 transparent transparent transparent;
-}
-
-& span:before {
-  left: 0;
-  border-width: 10px 0 0 10px;
-}
-
-& span:after {
-  right: 0;
-  border-width: 10px 10px 0 0;
-}
 }
 
 .top-paginate {
