@@ -10,12 +10,8 @@
       <% end %>
     </li>
     <% if user_signed_in? %>
-      <li class="btn-list">
-        <%= link_to mypage_path(current_user.id) do%>
-          <div class="btn">
-            <span class="hovering">マイページ</span><span class="default"><%= current_user.name %></span>
-          </div>
-        <% end %>
+      <li class="link-btn-list">
+        <%= link_to "#{ current_user.name }",mypage_path(current_user.id),class:"link-btn" %>
       </li>
       <li class="link-btn-list">
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"link-btn" %>

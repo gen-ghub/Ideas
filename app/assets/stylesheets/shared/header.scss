@@ -1,20 +1,24 @@
 $cWhite: white;
 $cBlack: black;
-
+$cTransparency:rgba(0,0,0,0.4);
+$cTransparency2:rgba(0,0,0,0);
+$cTransparency3:rgba(48, 31, 1, 0.6);
 
 header *{
   box-sizing: border-box;
   font-family: sans-serif;
+
 }
 
 header {
-  background: rgba($color: #f7f7f700, $alpha: 1.0);
+  background:$cTransparency;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 8vh;
   z-index: 10;
-  padding: 10px 50px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,66 +29,40 @@ header {
     justify-content: center;
     align-items: center;
 
+    .link-btn-list{
+      height: 8vh;
+      :hover{
+        color: $cWhite;
+        background-color: $cTransparency3;
+        transition: 0.5s;
+      }
+    }
+    .link-btn{
+      padding: 3vh 1vw 0 1vw;
+      background-color: $cTransparency2;
+      display: block;
+      height: 8vh;
+
+    }
+
     li {
       list-style: none;
       a {
         text-decoration: none;
         color: $cBlack;
-        margin: 0 20px;
         transition: 0.5s;
+
+        :hover{
+          color: $cWhite;
+          transition: 0.5s;
+        }
       }
     }
   }
 }
 
-header.scroll-nav {
-  padding: 0 25px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-
-.btn-list{
-  background: rgba($color: #f7f7f700, $alpha: 1.0);
-
-.btn {
-    position: relative;
-    display: inline-block;
-    transform-style: preserve-3d;
-    font-weight: 700;
-    perspective: 300px;
-    width: 120px;
-    height: 50px;
-
-    cursor: pointer;
-
-      & span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        line-height: 48px;
-        text-align: center;
-        transition: all 0.3s;
-        transform-origin: center center -25px;
-        background-color: rgba($color: #f7f7f700, $alpha: 1.0);
-        color: black;
-      }
-
-      &:hover {
-        & .hovering {
-          transform: rotateX(0);
-          background-color: rgba($color: #f7f7f700, $alpha: 1.0);
-        }
-        & .default {
-          transform: rotateX(-90deg);
-          background-color: rgba($color: #f7f7f700, $alpha: 1.0);
-        }
-      }
-  }
-}
 .list-right{
-  margin-right: 3vw;
+  margin-right: 2vw;
 }
 
 .logo{
@@ -115,24 +93,94 @@ header.scroll-nav {
     padding-left: 10px;
   }
 
-
   .search-btn {
     display: inline-block;
     font-weight: 700;
     perspective: 300px;
     width: 150px;
     margin: 0 auto;
+    margin-right: 2vw;
     cursor: pointer;
     border-radius:5px;
-    background-color: rgba($color: #ffffff96, $alpha: 1.0);
+    background-color: $cTransparency2;
     color: $cBlack;
-    border: 2px solid rgba($color: #0000004d, $alpha: 0.4);
+    border: 2px solid $cTransparency;
     &:hover{
-      background-color: rgba($color: #0000004d, $alpha: 0.4);
+      background-color: $cTransparency3;
       color: $cWhite;
-      border: 2px solid rgba($color: #0000004d, $alpha: 0.4);
+      border: 2px solid $cWhite;
     }
   }
 }
+
+header.scroll-nav {
+  height: 5vh;
+  padding: 0 25px;
+  box-shadow: 0 0.5rem 1rem $cTransparency;
+  .link-btn-list{
+
+    height: 5vh;
+    transition: 0.8s;
+
+  }
+  .link-btn{
+    padding: 1vw;
+    background-color: $cTransparency2;
+    display: block;
+    height: 5vh;
+    transition: 0.8s;
+  }
+  .logo{
+    margin-left: 2vw;
+    width: 8vw;
+    height: 6vh;
+    background: cover;
+    transition: 0.8s;
+  }
+  .search-bar-contents {
+    padding-top: 1vh;
+    .search-form {
+      width: 50vw;
+      height: 4vh;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 1vh;
+      margin-right: 2vw;
+      transition: 0.8s;
+    }
+
+    .search-form>.input-box {
+      width: 100%;
+      height: 4vh;
+      padding-left: 10px;
+      background-color: $cTransparency2;
+      transition: 0.8s;
+    }
+
+    .search-btn {
+      display: inline-block;
+      font-weight: 700;
+      perspective: 300px;
+      width: 120px;
+      margin: 0 auto;
+      margin-right: 2vw;
+      cursor: pointer;
+      border-radius:5px;
+      background-color: $cTransparency2;
+      color: $cBlack;
+      border: 2px solid $cTransparency;
+      transition: 0.8s;
+      &:hover{
+        background-color: $cTransparency3;
+        color: $cWhite;
+        border: 2px solid $cWhite;
+        transition: 0.8s;
+      }
+    }
+  }
+}
+
+
+
 
 
