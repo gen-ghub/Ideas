@@ -1,6 +1,36 @@
 
-
 <div class="user-wrapper">
+  <div class="top-user-wrapper">
+    <div class="user-image">
+      <% if @user.image.attached? %>
+        <%= image_tag @user.image %>
+      <% else %>
+        <%= image_tag 'profile_icon.png' %>
+      <% end %>
+    </div>
+    <div class="user-name">
+      <h1><%= @user.name %></h1>
+    </div>
+    <div class="user-position">
+      <h4><%= @user.position %></h4>
+    </div>
+  </div>
+  <div class="user-toolbar">
+
+
+  </div>
+  <div class="user-main-content">
+
+
+  </div>
+
+
+
+
+
+
+
+
   <div class="left-wrapper">
     <div class="edit-icons">
       <% if  user_signed_in? && @user == current_user %>
@@ -37,32 +67,17 @@
   </div>
   <div class="main-wrapper">
   <div class="user-table">
-    <div class="user-image">
-      <% if @user.image.attached? %>
-        <%= image_tag @user.image %>
-      <% else %>
-        <%= image_tag 'profile_icon.png' %>
-      <% end %>
-    </div>
 
 
-    <div class="user-name">
-      <h1>
-        <%= @user.name %>
-      </h1>
-    </div>
+
+
     <div class="user-skill">
       スキル
       <h4>
         <%= @user.skill %>
       </h4>
     </div>
-    <div class="user-position">
-      所属
-      <h4>
-        <%= @user.position %>
-      </h4>
-    </div>
+
     <div class="user-profile">
       プロフィール
       <p>

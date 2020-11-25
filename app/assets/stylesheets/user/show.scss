@@ -4,8 +4,48 @@ $cProfile:black;
 $cBlack:black;
 
 .user-wrapper {
-background-color: rgba(207, 250, 87, 0.473);
-text-align: center;
+  .top-user-wrapper{
+    height: 50vh;
+    width: 100vw;
+    background-color: red;
+    position: relative;
+    .user-image{
+      position: absolute;
+      top: 10vh;
+      left: 10vw;
+      img{
+        margin: 70px;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid $cBlack;
+        background-color: $cWhite;
+      }
+    }
+    .user-name{
+      position: absolute;
+      top: 20vh;
+      left: 30vw;
+      background-color: white;
+    }
+    .user-position{
+      position: absolute;
+      top: 30vh;
+      left: 30vw;
+      background-color: white;
+    }
+  }
+  .user-toolbar{
+    height: 8vh;
+    width: 100vw;
+    background-color: blue;
+  }
+  .user-main-content{
+    width: 100vw;
+    height: 100vh;
+    background-color: chartreuse;
+  }
 }
 
 
@@ -93,28 +133,15 @@ text-align: center;
   h4{
     padding: 30px;
   }
-  .user-name{
-    margin-bottom: 100px;
+
   }
   .user-profile p{
     padding: 30px;
 
 
   }
-}
 
-.user-image{
 
-  img{
-    margin: 70px;
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid $cBlack;
-    background-color: $cWhite;
-  }
-}
 
 .user-post-list{
   height: 10vh;
