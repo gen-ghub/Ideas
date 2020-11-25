@@ -3,23 +3,23 @@
   height: 100vh;
 }
 .idea-new-display {
-  & header{
+  header{
   display: none;
   }
-  & footer{
+  footer{
     display: none;
   }
-  & h1{
+  h1{
     text-align: center;
     padding: 50px;
     margin: 0;
   }
-  & .hoom-icon{
+  .hoom-icon{
     position: absolute;
     top: 20px;
     left: 20px;
   }
-  & .mypage-icon{
+  .mypage-icon{
     position: absolute;
     top: 85px;
     left: 20px;
@@ -31,35 +31,35 @@
   display: flex;
 
 
-  & .idea-new-left{
+  .idea-new-left{
     width: 40vw;
   }
 
-  & .idea-new-right{
-    & div{
+  .idea-new-right{
+    div{
       margin: 10px;
     }
-    & input {
+    input {
       margin: 10px;
     }
-    & input[type="text"] {
+    input[type="text"] {
       width: 300px;
       height: 40px;
     }
-    & .select-box{
+    .select-box{
       width: 300px;
       height: 40px;
     }
-    & .text-area{
+    .text-area{
       width: 300px;
       height: 300px;
     }
-    & .click-upload{
-      & input {
+    .click-upload{
+      input {
         margin: 0;
       }
-      & #image-list{
-        & img {
+      #image-list{
+        img {
           height: 150px;
           width: 150px;
           object-fit: cover;
@@ -67,7 +67,7 @@
         }
       }
     }
-    & .idea-new-btn{
+    .idea-new-btn{
       padding: 5px 20px ;
       margin: 10px 100px;
       background-color: powderblue;
@@ -79,7 +79,7 @@
   text-align: center;
   margin: 20px;
 
-  & a{
+  a{
     padding: 5px 20px ;
 
   }

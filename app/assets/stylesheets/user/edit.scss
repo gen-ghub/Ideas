@@ -6,10 +6,10 @@ $cBlack:black;
 
 }
 .user-edit-display {
-  & header{
+  header{
   display: none;
   }
-  & footer{
+  footer{
     display: none;
   }
 }
@@ -19,7 +19,7 @@ $cBlack:black;
   left: 20px;
 }
 .user-edit-wrapper{
-  & h1 {
+  h1 {
 
     padding: 5px;
     margin: 70px 20vw 20px 20vw;
@@ -35,34 +35,34 @@ $cBlack:black;
   justify-content: center;
   padding: 50px;
 
-  & .account-details{
+  .account-details{
     margin: 0 50px;
   }
 
-  & .profile-details {
+  .profile-details {
     position: relative;
     margin: 0 50px;
 
-    & .user-edit-skii{
+    .user-edit-skii{
       width: 400px;
     }
-    & .user-edit-profile{
+    .user-edit-profile{
       width: 400px;
       height: 200px;
     }
-    & div {
+    div {
       color: $cBlack;
       font-size: 20px;
     }
-    & .img-upload{
+    .img-upload{
 
-      & #image-list{
+      #image-list{
         height: 150px;
         width: 150px;
         position: absolute;
 
         left: 300px;
-        & img {
+        img {
           height: 150px;
           width: 150px;
           object-fit: cover;
@@ -75,7 +75,7 @@ $cBlack:black;
 
 .user-edit-btn{
   text-align: center;
-  & input{
+  input{
     padding: 10px 50px ;
     background-color: powderblue;
     font-size: 20px;
@@ -85,7 +85,7 @@ $cBlack:black;
 .user-edit-back-btn{
   text-align: center;
   margin: 20px;
-  & a{
+  a{
     padding: 5px 20px ;
 
   }

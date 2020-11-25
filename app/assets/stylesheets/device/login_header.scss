@@ -1,7 +1,7 @@
 $cYellowgreen :Yellowgreen;
 
 .login-display{
-  & header{
+  header{
     display: none;
   }
 }
@@ -10,7 +10,7 @@ $cYellowgreen :Yellowgreen;
   width: 100vw;
   padding: 10px 10px;
   background-color: $cYellowgreen;
-  & div{
+  div{
     box-sizing: border-box;
 
   }

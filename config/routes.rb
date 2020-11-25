@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   resources :ideas do
     collection do
+      get 'list'
+    end
+    collection do
       get 'search'
     end
   end

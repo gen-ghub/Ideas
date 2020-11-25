@@ -13,12 +13,12 @@ text-align: center;
   position: absolute;
   top: 10vh;
   left: 1vw;
-  & img {
+  img {
     height: 30px;
     width: 30px;
     object-fit: cover;
   }
-  & a {
+  a {
     color: $cBlack;
     font-size: 20px;
     font-weight: 700;
@@ -29,12 +29,12 @@ text-align: center;
   position: absolute;
   top: 17vh;
   left: 1vw;
-  & img {
+  img {
     height: 30px;
     width: 30px;
     object-fit: cover;
   }
-  & a {
+  a {
     color: $cBlack;
     font-size: 20px;
     font-weight: 700;
@@ -45,12 +45,12 @@ text-align: center;
   position: absolute;
   top: 23vh;
   left: 1vw;
-  & img {
+  img {
     height: 30px;
     width: 30px;
     object-fit: cover;
   }
-  & a {
+  a {
     color: $cBlack;
     font-size: 20px;
     font-weight: 700;
@@ -61,12 +61,12 @@ text-align: center;
   position: absolute;
   top: 29vh;
   left: 1vw;
-  & img {
+  img {
     height: 30px;
     width: 30px;
     object-fit: cover;
   }
-  & a {
+  a {
     color: $cBlack;
     font-size: 20px;
     font-weight: 700;
@@ -76,12 +76,12 @@ text-align: center;
   position: absolute;
   top: 34vh;
   left: 1vw;
-  & img {
+  img {
     height: 30px;
     width: 30px;
     object-fit: cover;
   }
-  & a {
+  a {
     color: $cBlack;
     font-size: 20px;
     font-weight: 700;
@@ -90,13 +90,13 @@ text-align: center;
 .user-table{
   color: $cProfile;
   border-bottom: 4px solid $cBlack;
-  & h4{
+  h4{
     padding: 30px;
   }
-  & .user-name{
+  .user-name{
     margin-bottom: 100px;
   }
-  & .user-profile p{
+  .user-profile p{
     padding: 30px;
 
 
@@ -105,7 +105,7 @@ text-align: center;
 
 .user-image{
 
-  & img{
+  img{
     margin: 70px;
     height: 300px;
     width: 300px;
@@ -120,11 +120,11 @@ text-align: center;
   height: 10vh;
   width: 80vw;
   margin: auto;
-  & h1{
+  h1{
     font-size: 30px;
     padding: 40px;
   }
-  & .user-post-wrapper{
+  .user-post-wrapper{
 
   }
 }
@@ -135,19 +135,19 @@ text-align: center;
   margin: auto;
   align-items: center;
   display: flex;
-  & .post-lists {
+  .post-lists {
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    & .post-list{
+    .post-list{
       padding: 3vh 2vw;
     }
 
-    & li div{
+    li div{
       color: $cBlack;
     }
   }
-  & .idea-image img{
+  .idea-image img{
     height: 300px;
     width: 300px;
     object-fit: cover;

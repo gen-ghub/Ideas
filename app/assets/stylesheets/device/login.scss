@@ -8,18 +8,18 @@ $cBlack:black;
   width: 60vw;
   margin: 0 auto;
 // background-color: $cYellowgreen;
-  & h2{
+  h2{
     padding-top: 50px;
     color: $cBlack;
     font-size: 30px;
     font-weight: 900;
   }
-  & div{
+  div{
     padding: 10px;
   }
-  & .login-label{
+  .login-label{
     position: relative;
-    & img{
+    img{
       position: absolute;
 
       left: -23px;
@@ -28,12 +28,12 @@ $cBlack:black;
       object-fit: cover;
      }
   }
-  & .rememberable{
+  .rememberable{
     padding: 0 ;
   }
-  & .actions{
+  .actions{
     margin: 30px;
-    & input{
+    input{
       height: 40px;
       width: 150px;
 

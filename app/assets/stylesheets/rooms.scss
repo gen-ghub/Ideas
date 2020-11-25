@@ -1,11 +1,11 @@
 .room-display {
-  & header{
+  header{
   display: none;
   }
-  & footer{
+  footer{
     display: none;
   }
-  & *{
+  *{
     box-sizing: border-box;
   }
 }

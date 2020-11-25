@@ -3,7 +3,7 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   def index
-    @ideas = Idea.order("created_at DESC").page(params[:page]).per(6)
+
   end
 
   def new
@@ -46,7 +46,7 @@ class IdeasController < ApplicationController
   end
 
   def search
-    redirect_to root_path if params[:keyword] == ""
+    redirect_to list_ideas_path if params[:keyword] == ""
 
     split_keyword = params[:keyword].split(/[[:blank:]]+/)
 
@@ -58,6 +58,11 @@ class IdeasController < ApplicationController
     @ideas.uniq!
 
   end
+
+  def list
+    @ideas = Idea.order("created_at DESC").page(params[:page]).per(6)
+  end
+
 
   private
 

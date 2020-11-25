@@ -1,11 +1,11 @@
 .message-display {
-  & header{
+  header{
   display: none;
   }
-  & footer{
+  footer{
     display: none;
   }
-  & *{
+  *{
     box-sizing: border-box;
   }
 }
@@ -179,7 +179,7 @@
   cursor: pointer;
 
 
-    & span {
+    span {
       position: absolute;
       top: 0;
       left: 0;
@@ -191,23 +191,23 @@
       transform-origin: center center -25px;
 
     }
-    & .hovering {
+    .hovering {
       background-color:#253141;
       color: white;
       transform: rotateX(90deg);
     }
 
-    & .default {
+    .default {
       background-color: #253141;
       color: white;
       transform: rotateX(0);
     }
 
     &:hover {
-      & .hovering {
+      .hovering {
         transform: rotateX(0);
       }
-      & .default {
+      .default {
         transform: rotateX(-90deg);
       }
     }

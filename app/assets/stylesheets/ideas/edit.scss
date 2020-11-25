@@ -3,24 +3,24 @@
 
 }
 .idea-edit-display {
-  & header{
+  header{
   display: none;
   }
-  & footer{
+  footer{
     display: none;
   }
-  & h1{
+  h1{
     text-align: center;
     padding: 50px;
     margin: 0;
   }
-  & .hoom-icon{
+  .hoom-icon{
     position: absolute;
     top: 20px;
     left: 20px;
   }
 
-  & .mypage-icon{
+  .mypage-icon{
     position: absolute;
     top: 85px;
     left: 20px;
@@ -31,35 +31,35 @@
   display: flex;
 
 
-  & .idea-edit-left{
+  .idea-edit-left{
     width: 40vw;
   }
 
-  & .idea-edit-main{
-    & div {
+  .idea-edit-main{
+    div {
       margin: 10px;
     }
-    & input[type="text"] {
+    input[type="text"] {
       width: 300px;
       height: 40px;
     }
-    & .select-box{
+    .select-box{
       width: 300px;
       height: 40px;
     }
-    & .idea-text{
+    .idea-text{
       width: 300px;
       height: 300px;
     }
 
-    & .idea-edit-btn{
+    .idea-edit-btn{
       padding: 5px 20px ;
       margin: 10px 100px;
       background-color: powderblue;
     }
-    & .img-upload{
+    .img-upload{
       margin: 0;
-        & img {
+        img {
           height: 150px;
           width: 150px;
           object-fit: cover;

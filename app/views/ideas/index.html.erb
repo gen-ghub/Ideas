@@ -1,58 +1,41 @@
 
-<%= flash[:user_delete] %>
 
-<div class="swiper-space"></div>
-<div class="swiper-container">
-	<!-- メイン表示部分 -->
-	<div class="swiper-wrapper">
-		<!-- 各スライド -->
-		<div class="swiper-slide"><%= image_tag "slide.png" %></div>
-		<div class="swiper-slide"><%= image_tag "slide2.png" %></div>
-		<div class="swiper-slide"><%= image_tag "slide3.png" %></div>
-    <div class="swiper-slide"><%= image_tag "slide4.png" %></div>
-		<div class="swiper-slide"><%= image_tag "slide5.png" %></div>
-	</div>
-  <%# <div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
-  <div class="swiper-pagination"></div> %>
-</div>
+  <%= flash[:user_delete] %>
+  <div class="swiper-space"></div>
+  <div class="swiper-container">
+    <!-- メイン表示部分 -->
+    <div class="swiper-wrapper">
+      <!-- 各スライド -->
+      <div class="swiper-slide"><%= image_tag "slide.png" %></div>
+      <div class="swiper-slide"><%= image_tag "slide2.png" %></div>
+      <div class="swiper-slide"><%= image_tag "slide3.png" %></div>
+      <div class="swiper-slide"><%= image_tag "slide4.png" %></div>
+      <div class="swiper-slide"><%= image_tag "slide5.png" %></div>
+    </div>
+  </div>
+  <div class="top-explanation-wrapper">
+    <%= image_tag "set1.png",class:"explanation-img" %>
+    <div class="top-explanation">
+      <h1>『Seedeas』とは</h1>
+      <p>
+      『Seedeas』Seeds of ideas の略でアイデアの種という意味を込めてアプリ名にしています。<br>
+      天災の被害で出荷出来ない農作物を抱える農家さん、おいしい野菜や果物を味わいたいユーザーの方を繋ぐサービスです。<br>
+      </p>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p>
+      パティシエさんが利用すれば、スイーツやジャムに変身。もちろん、家庭で味わって頂くのも大丈夫です！<br>
+      </p>
+    </div>
+  </div>
 
 <div class="top-explanation">
-  <h1>『Seedeas』とは</h1>
-  <p>
-  『Seedeas』Seeds of ideas の略でアイデアの種という意味を込めてアプリ名にしています。<br>
-  天災の被害で出荷出来ない農作物を抱える農家さん、おいしい野菜や果物を味わいたいユーザーの方を繋ぐサービスです。<br>
-  </p>
-  <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-  <p>
-  パティシエさんが利用すれば、スイーツやジャムに変身。もちろん、家庭で味わって頂くのも大丈夫です！<br>
-  </p>
+      <h1>コンテンツ考案中</h1>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
+    </div>
 
-</div>
-
-<div class="idea-contents">
-  <div class="idea-contents-title">
-    <h1><span>募集・提案　投稿一覧</span></h1>
-  </div>
-
-  <div class="idea-contents-lists">
-    <ul class='post-lists'>
-      <% @ideas.each do |idea| %>
-        <li class='post-list'>
-          <%= link_to idea_path(idea.id) do %>
-            <div class="idea-image" >
-              <%= image_tag idea.image if idea.image.attached? %>
-            </div>
-          <% end %>
-            <div class="idea-title">
-              <%= idea.title %>
-            </div>
-            <div class="idea-tag">
-              <%= idea.tag.name %>
-            </div>
-        </li>
-      <% end %>
-    </ul>
-    <div class="top-paginate"><%= paginate @ideas %></div>
-  </div>
-</div>

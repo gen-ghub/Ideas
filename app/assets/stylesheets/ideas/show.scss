@@ -11,7 +11,7 @@ $cBlack:black;
   display: flex;
   text-align: center;
 
-  & .idea-show-left{
+  .idea-show-left{
     width: 15vw;
     height: 90vh;
 
@@ -19,12 +19,12 @@ $cBlack:black;
       position: absolute;
       top: 10vh;
       left: 1vw;
-      & img {
+      img {
         height: 30px;
         width: 30px;
         object-fit: cover;
       }
-      & a {
+      a {
         color: $cBlack;
         font-size: 20px;
         font-weight: 700;
@@ -35,12 +35,12 @@ $cBlack:black;
       position: absolute;
       top: 15vh;
       left: 1vw;
-      & img {
+      img {
         height: 30px;
         width: 30px;
         object-fit: cover;
       }
-      & a {
+      a {
         color: $cBlack;
         font-size: 20px;
         font-weight: 700;
@@ -50,39 +50,39 @@ $cBlack:black;
       position: absolute;
       top: 20vh;
       left: 1vw;
-      & img {
+      img {
         height: 30px;
         width: 30px;
         object-fit: cover;
       }
-      & a {
+      a {
         color: $cBlack;
         font-size: 20px;
         font-weight: 700;
       }
     }
   }
-  & .idea-show-right{
+  .idea-show-right{
     width: 15vw;
     height: 90vh;
   }
-  & .idea-show-center{
+  .idea-show-center{
     width: 70vw;
     padding-top: 100px;
-    & .idea-tag{
+    .idea-tag{
       font-size: 60px;
     }
-    & h2{
+    h2{
       font-size: 50px;
       color: $cBlack;
       padding: 20px;
     }
-    & .idea-box-img{
+    .idea-box-img{
       height: 400px;
       width: 400px;
       object-fit: cover;
     }
-    & .idea-user{
+    .idea-user{
       padding: 20px;
     }
   }
