@@ -79,8 +79,12 @@ ActiveRecord::Schema.define(version: 2020_11_16_075941) do
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "skill"
-    t.string "position"
+    t.string "producers", default: "", null: false
+    t.string "crops", default: "", null: false
+    t.string "address_code"
+    t.string "address"
+    t.string "url"
+    t.string "contact"
     t.text "profile"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

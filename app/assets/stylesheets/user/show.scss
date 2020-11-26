@@ -40,106 +40,23 @@ $cBlack:black;
     height: 8vh;
     width: 100vw;
     background-color: blue;
-  }
-  .user-main-content{
+    display: flex;
+    .tool-icon{
+      
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+    }
+    .user-main-content{
     width: 100vw;
     height: 100vh;
     background-color: chartreuse;
+    }
   }
 }
 
 
-.edit-icons {
-  position: absolute;
-  top: 10vh;
-  left: 1vw;
-  img {
-    height: 30px;
-    width: 30px;
-    object-fit: cover;
-  }
-  a {
-    color: $cBlack;
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
 
-.go-room {
-  position: absolute;
-  top: 17vh;
-  left: 1vw;
-  img {
-    height: 30px;
-    width: 30px;
-    object-fit: cover;
-  }
-  a {
-    color: $cBlack;
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-
-.like-lists {
-  position: absolute;
-  top: 23vh;
-  left: 1vw;
-  img {
-    height: 30px;
-    width: 30px;
-    object-fit: cover;
-  }
-  a {
-    color: $cBlack;
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-
-.follow-lists{
-  position: absolute;
-  top: 29vh;
-  left: 1vw;
-  img {
-    height: 30px;
-    width: 30px;
-    object-fit: cover;
-  }
-  a {
-    color: $cBlack;
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-.follower-lists{
-  position: absolute;
-  top: 34vh;
-  left: 1vw;
-  img {
-    height: 30px;
-    width: 30px;
-    object-fit: cover;
-  }
-  a {
-    color: $cBlack;
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-.user-table{
-  color: $cProfile;
-  border-bottom: 4px solid $cBlack;
-  h4{
-    padding: 30px;
-  }
-
-  }
-  .user-profile p{
-    padding: 30px;
-
-
-  }
 
 
 

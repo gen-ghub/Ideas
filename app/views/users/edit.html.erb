@@ -47,12 +47,28 @@
               <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
             </div>
             <div class="field">
-              <%= f.label :position %><br/>
-              <%= f.text_field :position, autofocus: true, autocomplete: "個人、企業など" %>
+              <%= f.label :producers %><br/>
+              <%= f.text_field :producers, autofocus: true, autocomplete: "企業名など" %>
             </div>
             <div class="field">
-              <%= f.label :skill %><br/>
-              <%= f.text_field :skill, autofocus: true, autocomplete: "特技や仕事など",class:"user-edit-skii" %>
+              <%= f.label :crops %><br/>
+              <%= f.text_field :crops, autofocus: true, autocomplete: "作成している農作物",class:"" %>
+            </div>
+            <div class="field">
+              <%= f.label :address_code %><br/>
+              <%= f.text_field :address_code, autofocus: true, autocomplete: "郵便番号",class:"" %>
+            </div>
+            <div class="field">
+              <%= f.label :address %><br/>
+              <%= f.text_field :address, autofocus: true, autocomplete: "生産拠点",class:"" %>
+            </div>
+            <div class="field">
+              <%= f.label :contact %><br/>
+              <%= f.text_field :contact, autofocus: true, autocomplete: "お問い合わせ先",class:"" %>
+            </div>
+            <div class="field">
+              <%= f.label :url %><br/>
+              <%= f.text_field :url, autofocus: true, autocomplete: "ホームページ",class:"" %>
             </div>
             <div class="field">
               <%= f.label :profile %><br/>

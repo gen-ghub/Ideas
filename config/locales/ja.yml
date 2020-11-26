@@ -3,9 +3,13 @@ ja:
   activerecord:
     attributes:
       user:
-        name: 名前
-        skill: スキル
-        position: 所属
+        name: 企業名
+        producers: 生産者
+        crops: 農作物
+        address_code: 郵便番号
+        address: 生産拠点
+        contact: お問い合わせ先
+        url: ホームページ
         profile: プロフィール
       idea:
         title: タイトル
