@@ -10,10 +10,11 @@
     <div class="user-name">
       <h1><%= @user.name %></h1>
     </div>
-    フォローワー数／フォロー数　導入予定
+    <div class="follow-list-wrapper">
+      フォローワー数／フォロー数　導入予定
+    </div>
   </div>
   <div class="user-toolbar">
-
 
 
     <% if user_signed_in? && @user == current_user %>

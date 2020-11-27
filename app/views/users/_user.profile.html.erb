@@ -1,0 +1,36 @@
+
+<div class="user-show-wrapper">
+  <div class="user-content">
+    <h2>生産者情報詳細</h2>
+    <div class="user-box">
+      <ul>
+        <li>
+          <div class="user-box-title">生産者名　　　　</div>
+          <div class="user-box-txt"><%= @user.producers %></div>
+        </li>
+        <li>
+          <div class="user-box-title">農作物　　　　　</div>
+          <div class="user-box-txt"><%= @user.crops %></div>
+        </li>
+        <li class="ubl-s">
+          <div class="user-box-title">生産拠点　　　　</div>
+          <div class="user-box-txt"><%= @user.address %></div>
+        </li>
+        <li class="ubl-s">
+          <div class="user-box-title">お問い合わせ先　</div>
+          <div class="user-box-txt"><%= @user.contact %></div>
+        </li>
+        <li class="ubl-s">
+          <div class="user-box-title">ホームページ　　</div>
+          <div class="user-box-txt"><%= @user.url %></div>
+        </li>
+      </ul>
+      <div class="user-box-right">
+        <span class="user-pf">プロフィール</span><br>
+        <div class="user-profile-txt">
+          <%= @user.profile %>
+        <div>
+      </div>
+    </div>
+  </div>
+</div>

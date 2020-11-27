@@ -1,23 +1,33 @@
-<div class="user-post-list">
-      <h1>
-        <%= @user.name %>の投稿一覧
-      </h1>
+<div class="user-idea-wrapper">
+    <div class="user-idea-main">
+      <h1><%= @user.name %>の投稿</h1>
     </div>
-    <div class="user-idea-contents-lists">
+    <div class="user-idea-content-wrapper">
       <% @ideas.each do |idea| %>
-        <%= link_to idea_path(idea.id) do %>
-          <ul class='post-lists'>
-            <li class='post-list'>
-              <div class="idea-tag-title">
-                <%= idea.tag.name %>
-                /
-                <%= idea.title %>
-              </div>
-              <div class="idea-image" >
-                <%= image_tag idea.image if idea.image.attached? %>
-              </div>
+        <div class="user-idea-content">
+          <ul class='user-idea-lists'>
+            <li class='user-idea-list'>
+              <%= link_to idea_path(idea.id) do %>
+                <div class="user-idea-title">
+                  <%= idea.title %>
+                </div>
+                <div class="user-idea-image" >
+                  <% if @user.image.attached? %>
+                    <%= image_tag idea.image %>
+                  <% else %>
+                    <%= image_tag 'not.png' %>
+                  <% end %>
+                </div>
+              <% end %>
+                <p class="user-idea-text">
+                  <%= idea.text %>
+                </p>
             </li>
           </ul>
-        <% end %>
+        </div>
       <% end %>
     </div>
+</div>
+
+
+

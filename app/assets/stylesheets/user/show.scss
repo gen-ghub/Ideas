@@ -1,13 +1,12 @@
 
 $cWhite: white;
-$cProfile:black;
 $cBlack:black;
 
 .user-wrapper {
   .top-user-wrapper{
     height: 50vh;
     width: 100vw;
-    background-color: red;
+    background-color:rgba(#8181816b, 0.4);
     position: relative;
     .user-image{
       position: absolute;
@@ -27,22 +26,25 @@ $cBlack:black;
       position: absolute;
       top: 20vh;
       left: 30vw;
-      background-color: white;
+      h1{
+        font-size: 4vh;
+      }
     }
-    .user-position{
+    .follow-list-wrapper{
       position: absolute;
       top: 30vh;
-      left: 30vw;
-      background-color: white;
+      left: 31vw;
+
     }
+
   }
   .user-toolbar{
     height: 8vh;
     width: 100vw;
-    background-color: blue;
+    background-color:rgba(#999999, 1.0);
     display: flex;
     .tool-icon{
-      
+
       height: 40px;
       width: 40px;
       object-fit: cover;
@@ -51,50 +53,112 @@ $cBlack:black;
     width: 100vw;
     height: 100vh;
     background-color: chartreuse;
+
     }
   }
 }
 
+.user-show-wrapper{
+  width: 100%;
+  .user-content{
+    margin: 5vh 0 0 10vw ;
 
-
-
-
-
-.user-post-list{
-  height: 10vh;
-  width: 80vw;
-  margin: auto;
-  h1{
-    font-size: 30px;
-    padding: 40px;
-  }
-  .user-post-wrapper{
-
-  }
-}
-
-
-.user-idea-contents-lists {
-  width: 70vw;
-  margin: auto;
-  align-items: center;
-  display: flex;
-  .post-lists {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-    .post-list{
-      padding: 3vh 2vw;
-    }
-
-    li div{
+    h2 {
+      font-size: 5vh;
       color: $cBlack;
+      margin-bottom: 3vh;
+    }
+    .user-box{
+      display: flex;
+
+      ul {
+        height: 45vh;
+        width: 40vw;
+        .ubl-s{
+          margin-bottom: 2vh;
+        }
+        li{
+          display: flex;
+          font-size: 2.5vh;
+          .user-box-title{
+            margin-bottom: 5vh;
+            border-bottom: 1px solid black;
+            margin-right: 1vw;
+          }
+          .user-box-txt{
+            width: 20vw;
+          }
+        }
+      }
+      .user-box-right{
+        .user-pf{
+          font-size: 3vh;
+          font-weight: 700;
+        }
+        .user-profile-txt{
+          border: 1px solid black;
+          border-radius:5px;
+          font-size: 2vh;
+          height: 40vh;
+          width: 40vw;
+        }
+      }
     }
   }
-  .idea-image img{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-  }
-
 }
+
+.user-idea-wrapper{
+
+  width: 100%;
+
+  .user-idea-main{
+    h1{
+      margin: 20vh 0 5vh 0;
+      font-size: 4vh;
+    }
+  }
+  .user-idea-content-wrapper{
+
+    width: 100%;
+
+    .user-idea-content{
+      height: 100%;
+      width: 70%;
+      margin: auto;
+
+      .user-idea-lists{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .user-idea-list{
+
+          width: 400px;
+          .user-idea-title{
+            font-size: 4.3vh;
+            color: $cBlack;
+            margin: 10vh 0 5vh 0;
+            text-decoration: none;
+          }
+          img{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+          }
+          .user-idea-text{
+            margin-top: 5vh;
+            margin-bottom: 10vh;
+            font-size: 2vh;
+            color: $cBlack;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
