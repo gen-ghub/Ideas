@@ -32,7 +32,7 @@
 
     <div class="top-content-wrapper">
       <h2>ピックアップ投稿</h2>
-      <% unless up_idea == nil %>
+      <% unless @up_idea == nil %>
         <div class="top-content">
           <div class="top-content-left">
             <%= link_to idea_path(@up_idea.id) do %>
