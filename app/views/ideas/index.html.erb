@@ -16,6 +16,7 @@
   <div class="top-explanation-wrapper">
     <%= image_tag "set1.png",class:"explanation-img" %>
     <div class="top-explanation">
+
       <h1>『Seedeas』とは</h1>
       <p>
       『Seedeas』Seeds of ideas の略でアイデアの種という意味を込めてアプリ名にしています。<br>
@@ -25,17 +26,49 @@
       <p>
       パティシエさんが利用すれば、スイーツやジャムに変身。もちろん、家庭で味わって頂くのも大丈夫です！<br>
       </p>
+
     </div>
   </div>
 
-<div class="top-explanation">
-      <h1>コンテンツ考案中</h1>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-      <p class="p-title">まだ、食べられる農作物をただ捨てるのは、もったいない！</p><br>
-    </div>
+    <div class="top-content-wrapper">
+      <h2>ピックアップ投稿</h2>
+      <div class="top-content">
+        <div class="top-content-left">
+          <%= link_to idea_path(@up_idea.id) do %>
+          <div class="first-idea-title">
+            <%= @up_idea.title %>
+          </div>
+          <div class="idea-image" >
+            <%= image_tag @up_idea.image if @up_idea.image.attached? %>
+          </div>
+        </div>
+        <% end %>
+        <div class="top-content-right">
+          <span class="name-span">企業・団体名</span><br>
+          <div class="user-name">
+            <%= link_to user_path(@up_idea.user.id) do %>
+              <%= @up_idea.user.name %>
+            <% end %>
+          </div>
+          <div class="idea-tag">
+            <%= @up_idea.tag.name %>
+          </div>
+          <span class="name-span">生産者</span><br>
+          <div class="user-producers">
+            <%= link_to user_path(@up_idea.user.id) do %>
+              <%= @up_idea.user.producers %>さん
+            <% end %>
+          </div>
 
+
+          <div class="user-image">
+            <% if @up_idea.user.image.attached? %>
+              <%= image_tag @up_idea.user.image %>
+            <% else %>
+              <%= image_tag 'profile_icon.png' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

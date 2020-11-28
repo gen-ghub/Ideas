@@ -3,6 +3,7 @@ $cBlack: black;
 $cTransparency:rgba(0,0,0,0.4);
 $cTransparency2:rgba(0,0,0,0);
 $cTransparency3:rgba(48, 31, 1, 0.6);
+$cTransparency4:rgba(255, 255, 255, 0.4);
 
 header *{
   box-sizing: border-box;
@@ -11,7 +12,7 @@ header *{
 }
 
 header {
-  background:$cTransparency;
+  background:$cTransparency4;
   position: fixed;
   top: 0;
   left: 0;
@@ -51,6 +52,7 @@ header {
         text-decoration: none;
         color: $cBlack;
         transition: 0.5s;
+        font-weight: 700;
 
         :hover{
           color: $cWhite;

@@ -1,16 +1,16 @@
-
-<div class="idea-contents-lists">
-    <ul class='post-lists'>
+<div class="idea-wrapper">
+  <div class="idea-content">
+    <ul class='idea-lists'>
       <% @ideas.each do |idea| %>
-        <li class='post-list'>
+        <li class='idea-list'>
           <%= link_to idea_path(idea.id) do %>
+            <div class="idea-title">
+              <%= idea.title %>
+            </div>
             <div class="idea-image" >
               <%= image_tag idea.image if idea.image.attached? %>
             </div>
           <% end %>
-            <div class="idea-title">
-              <%= idea.title %>
-            </div>
             <div class="idea-tag">
               <%= idea.tag.name %>
             </div>
@@ -19,9 +19,5 @@
     </ul>
   </div>
 
-
-
-
-
-
-<div class="top-paginate"><%= paginate @ideas %></div>
+  <div class="top-paginate"><%= paginate @ideas %></div>
+</div>

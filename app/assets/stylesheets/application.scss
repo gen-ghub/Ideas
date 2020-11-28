@@ -20,7 +20,7 @@
 
 
 .pagination>li>a {
-  border: none;     
+  border: none;
   color: #696969;
 }
 
@@ -32,4 +32,9 @@
 
 .pagination>li>a:hover {
   border-radius: 15px;
+}
+
+
+html{
+  scroll-behavior: smooth;
 }
