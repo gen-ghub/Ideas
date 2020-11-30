@@ -2,13 +2,14 @@
   <%= link_to root_path do%>
     <%=image_tag 'logo-icon2.png', class:"logo" %>
   <% end %>
-  <ul>
+
     <li class='search-bar-contents'>
       <%= form_with(url: search_ideas_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "input-box" %>
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
     </li>
+    <ul>
     <% if user_signed_in? %>
       <li class="link-btn-list">
         <%= link_to "#{ current_user.name }",mypage_path(current_user.id),class:"link-btn" %>

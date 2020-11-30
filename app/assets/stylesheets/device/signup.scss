@@ -3,34 +3,101 @@ $cBlack:black;
 
 .signup-wrapper{
 
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-image: image-url('set1.png');
-  background-size:cover;
+  background-color: rgba( #e7e7e7,  0.6);
+  position: relative;
+  .signup-title{
+    position: absolute;
+    top: 7vh;
+    left: 42vw;
+    font-size: 5vh;
+    color: $cBlack;
+  }
 
   .signup-main{
-    padding: 8vh 5vw;
-    margin: 0 37vw 0 40vw;
-
-
+    padding: 2vh 41vw;
+    // display: flex;
     h2{
-      font-size: 5vh;
-      margin-bottom: 4vh;
+      margin-top: 20vh;
+      font-size: 3vh;
       color: $cBlack;
+    }
+    .signup-title2{
+      margin-top: 5vh;
     }
     .signup-field{
       height: 3vh;
       width: 13vw;
       margin-bottom: 3vh;
     }
-    .signup-btn{
+    .signup-field2{
       height: 3vh;
-      width: 8vw;
-      margin: 3vh 2vw;
+      width: 17vw;
+      margin-bottom: 3vh;
     }
+
     .signup-link{
       margin: 2vh 0 0 2vw;
     }
+    .user-new-profile{
+      width: 400px;
+      height: 200px;
+    }
+    .sigup-left{
+
+      // margin-right: 5vw;
+    }
+    .signup-right{
+      // margin-right: 5vw;
+
+    }
+    .img-upload{
+      position: relative;
+      #image-list{
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 300px;
+        top: -50px;
+        img {
+          height: 150px;
+          width: 150px;
+          object-fit: cover;
+          border: 2px solid $cBlack;
+        }
+      }
+    }
+  }
+  .actions{
+    margin: 2vh 0 0 44vw;
+    .signup-btn{
+      height: 4vh;
+      width: 8vw;
+      background-color: rgba( rgb(82, 82, 82), 0.4);
+      color: $cBlack;
+      font-weight: 600;
+
+      &:hover{
+        background-color: rgba( #ccc, 0.4);
+        color: $cWhite;
+        border: 1px solid rgba( rgb(82, 82, 82), 0.6);
+      }
+    }
+  }
+  .signup-link{
+    margin: 2vh 0 0 44vw;
+    padding-bottom: 4vh;
+  }
+  .click-upload{
+    margin-bottom: 2vh;
   }
 }
+.user-new-back-btn{
+  margin: 0 0 0 46vw;
+    padding-bottom: 4vh;
+  a{
+    padding: 10px 20px ;
 
+  }
+}
