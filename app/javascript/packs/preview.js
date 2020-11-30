@@ -1,4 +1,4 @@
-if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
+if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.match( /sign_up/ )) {
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
 
@@ -8,7 +8,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         imageContent.remove();
       }
     }
-
+    
     const createImageHTML = (blob) => {
       const imageElement = document.createElement('div');
       const blobImage = document.createElement('img');
