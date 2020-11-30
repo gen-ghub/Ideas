@@ -20,17 +20,17 @@ describe Idea do
       it 'titleが空だと登録できない' do
         @idea.title = nil
         @idea.valid?
-        expect(@idea.errors.full_messages).to include("タイトルを入力してください")
+        expect(@idea.errors.full_messages).to include("Title can't be blank")
       end
       it 'tag_idが--では登録できない' do
         @idea.tag_id = 1
         @idea.valid?
-        expect(@idea.errors.full_messages).to include('カテゴリは「--」以外を選択してください')
+        expect(@idea.errors.full_messages).to include('Tag は「--」以外を選択してください')
       end
       it 'textが空では登録できない' do
         @idea.text = nil
         @idea.valid?
-        expect(@idea.errors.full_messages).to include("アイデアを入力してください")
+        expect(@idea.errors.full_messages).to include("Text can't be blank")
       end
 
     end

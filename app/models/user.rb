@@ -5,7 +5,10 @@ class User < ApplicationRecord
   has_one_attached :image, dependent: :destroy
   has_many :ideas, dependent: :destroy
 
-  validates :name,presence: true
+  with_options presence: true do
+  validates :name
+  validates :producers
+  end
 
   has_many :room_users, dependent: :destroy
   has_many :rooms, through: :room_users

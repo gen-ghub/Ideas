@@ -6,20 +6,20 @@ $cBlack:black;
   height: 100%;
   width: 100%;
   background-color: rgba( #e7e7e7,  0.6);
-  position: relative;
+
   .signup-title{
-    position: absolute;
-    top: 7vh;
-    left: 42vw;
+    margin-left: 41vw;
+    margin-top: 0;
+    padding-top: 15vh;
     font-size: 5vh;
     color: $cBlack;
   }
 
   .signup-main{
-    padding: 2vh 41vw;
+    padding: 2vh 0 2vh 41vw;
     // display: flex;
     h2{
-      margin-top: 20vh;
+
       font-size: 3vh;
       color: $cBlack;
     }
