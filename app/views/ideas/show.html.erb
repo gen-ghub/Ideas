@@ -2,13 +2,6 @@
 <div class="idea-show-main">
   <div class="idea-show-wrapper">
     <div class="idea-show-left">
-    <% if user_signed_in? %>
-      <div class="new-room-btn">
-        <%= image_tag 'room.png'%>
-        <%= link_to "ルームを作成", new_room_path %>
-      </div>
-    <% end %>
-
         <% if user_signed_in? %>
           <% if @idea.user.id == current_user.id %>
           <div class="edit-idea-btn">

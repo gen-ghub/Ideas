@@ -1,12 +1,53 @@
-
-<div class="user-wrapper">
-  <%= render "user.show"%>
-  <div class="user-main-content">
-    <div class="user.profile-contents">
-      <%= render "user.profile"%>
+<body class="user-show-display">
+  <div class="user-wrapper">
+    <div class="top-user-wrapper">
+      <div class="user-image">
+        <% if @user.image.attached? %>
+          <%= image_tag @user.image %>
+        <% else %>
+          <%= image_tag 'profile_icon.png' %>
+        <% end %>
+      </div>
+      <div class="user-name">
+        <h1><%= @user.name %></h1>
+      </div>
+      <div class="follow-list-wrapper">
+        フォローワー数／フォロー数　導入予定
+      </div>
     </div>
-    <div class="user.list-contents">
-      <%= render "user.list"%>
+    </div>
+    <div class="tab-area">
+      <div class="tab left-tab active">
+        生産者投稿一覧
+      </div>
+      <div class="tab">
+        詳細情報
+      </div>
+       <% if user_signed_in? && @user == current_user %>
+       <div class="user-edit-icon">
+          <dl id="acMenu">
+            <dt><%= image_tag 'edit-icon.png', class:"tool-icon"%></dt>
+            <dd> <%= link_to 'アカウント　編集',edit_user_path(current_user) %>　／　<%= link_to '削除',user_path(current_user),method: :delete %></dd>
+          </dl>
+        </div>
+      <% end %>
+    </div>
+    <div class="content-area">
+      <div class="content show">
+        <%= render "user.list"%>
+      </div>
+      <div class="content">
+        <%= render "user.profile"%>
+      </div>
     </div>
   </div>
-</div>
+
+</body>
+
+
+
+
+
+
+
+
