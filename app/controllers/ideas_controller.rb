@@ -3,7 +3,7 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   def index
-    @up_idea = Idea.first
+    @up_idea = Idea.last
   end
 
   def new
