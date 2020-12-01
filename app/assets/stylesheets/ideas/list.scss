@@ -1,38 +1,83 @@
 $cBlack:black;
 
-.idea-wrapper{
-  height: 100%;
-  width: 100%;
-  margin: 10vh;
-}
+.idea-list-wrapper{
+  background-color: wheat;
+  margin: 0;
+  padding: 20vh 20vw;
+  h1{
+    margin: 0 0 50px 0;
+    font-size: 3vw;
 
-.idea-content{
-  height: 100%;
-  width: 70%;
-  margin: auto;
+  }
+  .idea-list-main{
 
-  .idea-lists{
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    .idea-list{
-
-      width: 400px;
-      .idea-title{
-        font-size: 2vh;
-        color: $cBlack;
-        text-decoration: none;
-      }
-      img{
-        height: 300px;
-        width: 300px;
-        object-fit: cover;
-      }
-    }
   }
 }
 
-
+figure.cp_caption {
+	line-height: 0;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	min-width: 220px;
+	max-width: 300px;
+	max-height: 220px;
+  margin-right: 1vw;
+  margin-bottom: 3vh;
+	color: #ffffff;
+}
+figure.cp_caption * {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+figure.cp_caption img {
+  width: 100%;
+  height: 100%;
+	-webkit-transition: all 0.4s;
+	        transition: all 0.4s;
+  opacity: 1;
+  object-fit: cover;
+}
+figure.cp_caption h2 {
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+  border-bottom: 1px solid #fff;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+figure.cp_caption p {
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+}
+figure.cp_caption:hover img {
+	-webkit-transform: translateY(-45px);
+	        transform: translateY(-45px);
+}
+figure.cp_caption:hover figcaption {
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.1s;
+	        transition:         transform 0.3s, opacity 0.1s;
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
+	opacity: 1;
+}
+figure.cp_caption figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 0.5em;
+	-webkit-transition: -webkit-transform 0.35s, opacity 0.1s 0.3s;
+	        transition:         transform 0.35s, opacity 0.1s 0.3s;
+	-webkit-transform: translateY(100%);
+	        transform: translateY(100%);
+	opacity: 0;
+	color: #ffffff;
+	background: rgba(27, 37, 56, 1);
+}

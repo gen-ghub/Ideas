@@ -39,45 +39,51 @@
 
     </div>
   </div>
-
     <div class="top-content-wrapper">
+    <div class="cp_keyframes"></div>
       <h2>ピックアップ投稿</h2>
       <% unless @up_idea == nil %>
+
         <div class="top-content">
-          <div class="top-content-left">
-            <%= link_to idea_path(@up_idea.id) do %>
+          <%= link_to idea_path(@up_idea.id) do %>
             <div class="first-idea-title">
               <%= @up_idea.title %>
             </div>
-            <div class="idea-image" >
-              <%= image_tag @up_idea.image if @up_idea.image.attached? %>
-            </div>
-          </div>
           <% end %>
-          <div class="top-content-right">
-            <span class="name-span">企業・団体名</span><br>
-            <div class="user-name">
-              <%= link_to user_path(@up_idea.user.id) do %>
-                <%= @up_idea.user.name %>
-              <% end %>
-            </div>
-            <div class="idea-tag">
-              <%= @up_idea.tag.name %>
-            </div>
-            <span class="name-span">生産者</span><br>
-            <div class="user-producers">
-              <%= link_to user_path(@up_idea.user.id) do %>
-                <%= @up_idea.user.producers %>さん
-              <% end %>
+          <div class="top-content-box">
+            <div class="top-content-left">
+              <div class="idea-image" >
+                <% if @up_idea.image.attached? %>
+                  <%= image_tag @up_idea.image %>
+                <% else %>
+                  <%= image_tag 'not.png' %>
+                <% end %>
+              </div>
             </div>
 
+            <div class="top-content-right">
+              <span class="name-span">企業・団体名</span><br>
+              <div class="user-name">
+                <%= link_to user_path(@up_idea.user.id) do %>
+                  <%= @up_idea.user.name %>
+                <% end %>
+              </div>
 
-            <div class="user-image">
-              <% if @up_idea.user.image.attached? %>
-                <%= image_tag @up_idea.user.image %>
-              <% else %>
-                <%= image_tag 'profile_icon.png' %>
-              <% end %>
+              <span class="name-span">生産者</span><br>
+              <div class="user-producers">
+                <%= link_to user_path(@up_idea.user.id) do %>
+                  <%= @up_idea.user.producers %>さん
+                <% end %>
+              </div>
+
+
+              <div class="user-image">
+                <% if @up_idea.user.image.attached? %>
+                  <%= image_tag @up_idea.user.image %>
+                <% else %>
+                  <%= image_tag 'profile_icon.png' %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
