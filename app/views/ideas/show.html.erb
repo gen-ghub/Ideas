@@ -1,49 +1,30 @@
-
-<div class="idea-show-main">
-  <div class="idea-show-wrapper">
-    <div class="idea-show-left">
-        <% if user_signed_in? %>
-          <% if @idea.user.id == current_user.id %>
-          <div class="edit-idea-btn">
-            <%= image_tag 'edit-icon.png'%>
-            <%= link_to '投稿の編集', edit_idea_path(@idea.id), method: :get, class: "idea-red-btn" %>
-          </div>
-          <div class="delete-idea-btn">
-            <%= image_tag 'delete.png'%>
-            <%= link_to '投稿を削除', idea_path(@idea.id), method: :delete, class:'idea-destroy' %>
-          </div>
-          <% end %>
-        <% end %>
+<div class="idea-show-wrapper">
+  <div class="cp_card04">
+    <div class="photo">
+      <% if @idea.image.attached? %>
+        <%= image_tag @idea.image ,class:"" %>
+      <% else %>
+        <%= image_tag 'not.png' %>
+      <% end %>
     </div>
-
-    <div class="idea-show-center">
-      <div class="idea-box">
-        <div class="idea-tag-box">
-          <span class="idea-tag">
-            <%= @idea.tag.name %>
-          </span>
-        </div>
-        <h2 class="title">
-          <%= @idea.title %>
-        </h2>
-        <div class='idea-img-content'>
-          <%= image_tag @idea.image ,class:"idea-box-img" if @idea.image.attached? %>
-        </div>
-        <div class="idea-box">
-          <p class="idea-text">
-            <%= @idea.text %>
-          </p>
-        </div>
-        <div class="idea-user">
-          <span id="idea_like">
-            <%= render 'like', idea: @idea %>
-          </span>
-            　　　投稿者 <%= link_to @idea.user.name, user_path(@idea.user.id) %>
-        </div>
+    <div class="details">
+      <div class="category">
+        <p><%= @idea.tag.name %></p>
+        <span id="idea_like">
+          <%= render 'like', idea: @idea %>
+        </span>
       </div>
-
+      <div class="date">
+        <span class="day"><%= l @idea.created_at %></span>
+      </div>
     </div>
-    <div class="idea-show-right">
+    <div class="description">
+      <h1><%= @idea.title %></h1>
+      <div class="text">
+        <p><%= @idea.text %></p>
+        <%= link_to @idea.user.name, user_path(@idea.user.id) %>
+      </div>
     </div>
   </div>
 </div>
+

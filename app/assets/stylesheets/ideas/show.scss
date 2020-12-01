@@ -1,89 +1,85 @@
-$cWhite: white;
-$cBlack:black;
-
-
-.idea-show-main{
+.idea-show-wrapper{
+  padding-top: 20vh;
+  padding-bottom: 20vh;
   background-color: wheat;
 }
 
+.cp_card04 {
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in;
+  border-bottom: 5px solid transparent;
+  }
+  .cp_card04 .photo {
 
-.idea-show-wrapper{
-  display: flex;
   text-align: center;
+  overflow: hidden;
 
-  .idea-show-left{
-    width: 15vw;
-    height: 90vh;
+  }
+  .photo img{
 
-    .new-room-btn {
-      position: absolute;
-      top: 10vh;
-      left: 1vw;
-      img {
-        height: 30px;
-        width: 30px;
-        object-fit: cover;
-      }
-      a {
-        color: $cBlack;
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
-
-    .edit-idea-btn {
-      position: absolute;
-      top: 15vh;
-      left: 1vw;
-      img {
-        height: 30px;
-        width: 30px;
-        object-fit: cover;
-      }
-      a {
-        color: $cBlack;
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
-    .delete-idea-btn {
-      position: absolute;
-      top: 20vh;
-      left: 1vw;
-      img {
-        height: 30px;
-        width: 30px;
-        object-fit: cover;
-      }
-      a {
-        color: $cBlack;
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
+    height: 90%;
+    width: 100%;
   }
-  .idea-show-right{
-    width: 15vw;
-    height: 90vh;
+  .cp_card04:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  border: none;
+  border-bottom: 5px solid #00BCD4;
   }
-  .idea-show-center{
-    width: 70vw;
-    padding-top: 100px;
-    .idea-tag{
-      font-size: 60px;
-    }
-    h2{
-      font-size: 50px;
-      color: $cBlack;
-      padding: 20px;
-    }
-    .idea-box-img{
-      height: 400px;
-      width: 400px;
-      object-fit: cover;
-    }
-    .idea-user{
-      padding: 20px;
-    }
+  .cp_card04 .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 1em 0 1em;
+  font-size: 0.8em;
   }
-}
+  .cp_card04 .date {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+  }
+  .cp_card04 .category {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  }
+  .cp_card04 .category p {
+  font-size: 0.8em;
+  padding: 3px 8px;
+  cursor: pointer;
+  width: 8em;
+  margin: 0;
+  border-radius: 10px;
+  background: #00BCD4;
+  text-align: center;
+  color: #ffffff;
+  }
+  .cp_card04 .description {
+  padding: 0 1em;
+  }
+  .cp_card04 .description h1 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: 0.5em;
+  }
+  .cp_card04 .description .text p {
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  }
+  .cp_card04 .description a {
+  float: right;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #00BCD4;
+  }

@@ -29,39 +29,39 @@
         <%= f.text_field :name, autofocus: true, autocomplete: "name",class:"signup-field" %>
       </div>
       <div class="field">
-              <%= f.label :producers %>（必須）<br/>
-              <%= f.text_field :producers, autofocus: true, autocomplete: "生産者名",class:"signup-field" %>
-            </div>
+        <%= f.label :producers %>（必須）<br />
+        <%= f.text_field :producers, autofocus: true, autocomplete: "生産者名",class:"signup-field" %>
+      </div>
       <div class="img-upload">
-          <div class="img-upload-text">
-            プロフィール画像
-          </div>
-          <div class="click-upload">
-            <p>クリックしてファイルをアップロード</p>
-            <%= f.file_field :image, id:"user-image" %>
-          </div>
-          <div id="image-list"></div>
+        <div class="img-upload-text">
+          プロフィール画像
         </div>
-        <div class="field">
-          <%= f.label :crops %><br/>
-          <%= f.text_field :crops, autofocus: true, autocomplete: "作成している農作物",class:"signup-field" %>
+        <div class="click-upload">
+          <p>クリックしてファイルをアップロード</p>
+          <%= f.file_field :image, id:"user-image" %>
         </div>
-        <div class="field">
-          <%= f.label :address %><br/>
-          <%= f.text_field :address, autofocus: true, autocomplete: "生産拠点",class:"signup-field2" %>
-        </div>
-        <div class="field">
-          <%= f.label :contact %><br/>
-          <%= f.text_field :contact, autofocus: true, autocomplete: "お問い合わせ先",class:"signup-field2" %>
-        </div>
-        <div class="field">
-          <%= f.label :url %><br/>
-          <%= f.text_field :url, autofocus: true, autocomplete: "ホームページ",class:"signup-field2" %>
-        </div>
-        <div class="field">
-          <%= f.label :profile %><br/>
-          <%= f.text_area :profile, autofocus: true, autocomplete: "自己紹介文を書いてください",class:"user-new-profile" %>
-        </div>
+        <div id="image-list"></div>
+      </div>
+      <div class="field">
+        <%= f.label :crops %><br/>
+        <%= f.text_field :crops, autofocus: true, autocomplete: "作成している農作物",class:"signup-field" %>
+      </div>
+      <div class="field">
+        <%= f.label :address %><br/>
+        <%= f.text_field :address, autofocus: true, autocomplete: "生産拠点",class:"signup-field2" %>
+      </div>
+      <div class="field">
+        <%= f.label :contact %><br/>
+        <%= f.text_field :contact, autofocus: true, autocomplete: "お問い合わせ先",class:"signup-field2" %>
+      </div>
+      <div class="field">
+        <%= f.label :url %><br/>
+        <%= f.text_field :url, autofocus: true, autocomplete: "ホームページ",class:"signup-field2" %>
+      </div>
+      <div class="field">
+        <%= f.label :profile %><br/>
+        <%= f.text_area :profile, autofocus: true, autocomplete: "自己紹介文を書いてください",class:"user-new-profile" %>
+      </div>
     </div>
 
   </div>

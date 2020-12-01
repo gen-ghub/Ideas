@@ -5,7 +5,7 @@ $cBlack:black;
 
   height: 100%;
   width: 100%;
-  background-color: rgba( #e7e7e7,  0.6);
+  background-color: wheat;
 
   .signup-title{
     margin-left: 41vw;
@@ -74,12 +74,12 @@ $cBlack:black;
     .signup-btn{
       height: 4vh;
       width: 8vw;
-      background-color: rgba( rgb(82, 82, 82), 0.4);
+      background-color: wheat;
       color: $cBlack;
       font-weight: 600;
 
       &:hover{
-        background-color: rgba( #ccc, 0.4);
+        background-color: rgba( rgb(255, 209, 4), 0.4);
         color: $cWhite;
         border: 1px solid rgba( rgb(82, 82, 82), 0.6);
       }

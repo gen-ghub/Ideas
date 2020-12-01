@@ -53,10 +53,12 @@
           <div class="top-content-box">
             <div class="top-content-left">
               <div class="idea-image" >
+                <%= link_to idea_path(@up_idea.id) do %>
                 <% if @up_idea.image.attached? %>
                   <%= image_tag @up_idea.image %>
                 <% else %>
                   <%= image_tag 'not.png' %>
+                <% end %>
                 <% end %>
               </div>
             </div>
@@ -89,4 +91,5 @@
         </div>
       </div>
       <% end %>
+      
     </div>

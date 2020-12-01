@@ -5,10 +5,12 @@
   <div class="idea-list-main">
     <% @ideas.each do |idea| %>
       <figure class="cp_caption">
-        <% if idea.image.attached? %>
-          <%= image_tag idea.image %>
-        <% else %>
-          <%= image_tag 'not.png' %>
+        <%= link_to idea_path(idea.id) do %>
+          <% if idea.image.attached? %>
+            <%= image_tag idea.image %>
+          <% else %>
+            <%= image_tag 'not.png' %>
+          <% end %>
         <% end %>
         <figcaption>
           <%= link_to idea_path(idea.id) do %>

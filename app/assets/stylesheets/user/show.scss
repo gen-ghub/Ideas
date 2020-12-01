@@ -52,7 +52,7 @@ $cBlack:black;
 .user-profile-wrapper{
   width: 100%;
   padding: 10vh 0;
-  background-color: #ccc;
+  background-color: wheat;
   .user-content{
     margin: 0 0 0 10vw ;
 
@@ -103,7 +103,7 @@ $cBlack:black;
 }
 
 .user-idea-wrapper{
-  background-color:#ccc ;
+  background-color: wheat;
   width: 100%;
 
 
@@ -167,11 +167,11 @@ $cBlack:black;
   display: flex;
 
 
-  background-color: #222e3e;
+  background-color: rgb(248, 188, 77);
   cursor: pointer;
   .tab {
     width: 300px;
-
+    height: 60px;
     line-height: 30px;
     text-align: center;
     color: white;
@@ -185,7 +185,7 @@ $cBlack:black;
     margin-left: 8vw;
   }
   .tab.active {
-    background-color: #ccc;
+    background-color: wheat;
     color: #222e3e;
     border: none;
   }
