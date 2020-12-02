@@ -2,25 +2,25 @@
 
 <div class="idea-list-wrapper">
   <h1>投稿一覧</h1>
-  <div class="idea-list-main">
-    <% @ideas.each do |idea| %>
-      <figure class="cp_caption">
-        <%= link_to idea_path(idea.id) do %>
-          <% if idea.image.attached? %>
-            <%= image_tag idea.image %>
-          <% else %>
-            <%= image_tag 'not.png' %>
-          <% end %>
-        <% end %>
-        <figcaption>
+    <div class="idea-list-main">
+      <% @ideas.each do |idea| %>
+        <figure class="cp_caption">
           <%= link_to idea_path(idea.id) do %>
-            <h2><%= idea.title %></h2>
+            <% if idea.image.attached? %>
+              <%= image_tag idea.image %>
+            <% else %>
+              <%= image_tag 'not.png' %>
+            <% end %>
           <% end %>
-          <p><%= idea.tag.name %></p>
-        </figcaption>
-      </figure>
-    <% end %>
-    <div class="top-paginate"><%= paginate @ideas %></div>
-  </div>
+          <figcaption>
+            <%= link_to idea_path(idea.id) do %>
+              <h2><%= idea.title %></h2>
+            <% end %>
+            <p><%= idea.tag.name %></p>
+          </figcaption>
+        </figure>
+      <% end %>
+      <div class="top-paginate"><%= paginate @ideas %></div>
+    </div>
 </div>
 

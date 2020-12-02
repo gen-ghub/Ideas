@@ -1,30 +1,30 @@
 <div class="idea-show-wrapper">
   <div class="cp_card04">
-    <div class="photo">
-      <% if @idea.image.attached? %>
-        <%= image_tag @idea.image ,class:"" %>
-      <% else %>
-        <%= image_tag 'not.png' %>
-      <% end %>
-    </div>
-    <div class="details">
-      <div class="category">
-        <p><%= @idea.tag.name %></p>
-        <span id="idea_like">
-          <%= render 'like', idea: @idea %>
-        </span>
+      <div class="photo">
+        <% if @idea.image.attached? %>
+          <%= image_tag @idea.image ,class:"" %>
+        <% else %>
+          <%= image_tag 'not.png' %>
+        <% end %>
       </div>
-      <div class="date">
-        <span class="day"><%= l @idea.created_at %></span>
+      <div class="details">
+        <div class="category">
+          <p><%= @idea.tag.name %></p>
+          <span id="idea_like">
+            <%= render 'like', idea: @idea %>
+          </span>
+        </div>
+        <div class="date">
+          <span class="day"><%= l @idea.created_at %></span>
+        </div>
       </div>
-    </div>
-    <div class="description">
-      <h1><%= @idea.title %></h1>
-      <div class="text">
-        <p><%= @idea.text %></p>
-        <%= link_to @idea.user.name, user_path(@idea.user.id) %>
+      <div class="description">
+        <h1><%= @idea.title %></h1>
+        <div class="text">
+          <p><%= @idea.text %></p>
+          <%= link_to @idea.user.name, user_path(@idea.user.id) %>
+        </div>
       </div>
-    </div>
   </div>
 </div>
 

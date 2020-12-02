@@ -2,31 +2,51 @@
     <div class="user-idea-main">
       <h1><%= @user.name %>の投稿</h1>
     </div>
-    <div class="user-idea-content-wrapper">
-      <% @ideas.each do |idea| %>
-        <div class="user-idea-content">
-          <ul class='user-idea-lists'>
-            <li class='user-idea-list'>
-              <%= link_to idea_path(idea.id) do %>
-                <div class="user-idea-title">
-                  <%= idea.title %>
-                </div>
-                <div class="user-idea-image" >
-                  <% if @user.image.attached? %>
-                    <%= image_tag idea.image %>
-                  <% else %>
+    <% unless @ideas == nil %>
+      <div class="user-idea-content-wrapper">
+        <% @ideas.each do |idea| %>
+          <div class="user-idea-content">
+            <ul class='user-idea-lists'>
+              <li class='user-idea-list'>
+                <%= link_to idea_path(idea.id) do %>
+                  <div class="user-idea-title">
+                    <%= idea.title %>
+                  </div>
+                  <div class="user-idea-image" >
+                    <% if @user.image.attached? %>
+                      <%= image_tag idea.image %>
+                    <% else %>
+                      <%= image_tag 'not.png' %>
+                    <% end %>
+                  </div>
+                <% end %>
+                  <p class="user-idea-text">
+                    <%= idea.text %>
+                  </p>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="user-idea-content-wrapper">
+          <div class="user-idea-content">
+            <ul class='user-idea-lists'>
+              <li class='user-idea-list'>
+                  <div class="user-idea-title">
+                    まだ投稿がありません。
+                  </div>
+                  <div class="user-idea-image" >
                     <%= image_tag 'not.png' %>
-                  <% end %>
-                </div>
-              <% end %>
-                <p class="user-idea-text">
-                  <%= idea.text %>
-                </p>
-            </li>
-          </ul>
-        </div>
-      <% end %>
-    </div>
+                  </div>
+                  <p class="user-idea-text">
+                    詳細情報を御覧ください！
+                  </p>
+              </li>
+            </ul>
+          </div>
+      </div>
+    <% end %>
 </div>
 
 
