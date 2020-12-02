@@ -1,11 +1,11 @@
 $cWhite: white;
 $cBlack:black;
 
-.back{
-
-
-}
 .user-edit-display {
+  background-image: image-url('img5.png');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   header{
   display: none;
   }
@@ -14,8 +14,13 @@ $cBlack:black;
   }
 }
 .hoom-icon{
-  z-index: 5;
+  position: absolute;
   top: 20px;
+  left: 20px;
+}
+.mypage-icon{
+  position: absolute;
+  top: 85px;
   left: 20px;
 }
 .user-edit-wrapper{
@@ -76,14 +81,19 @@ $cBlack:black;
   text-align: center;
   input{
     padding: 10px 50px ;
-    background-color: powderblue;
+    background-color: rgba(176, 224, 230, 0);
     font-size: 20px;
+    color: $cWhite;
+    &:hover{
+      background-color: rgba(253, 253, 253, 0.61);
+      color: $cBlack;
+    }
   }
 }
 
 .user-edit-back-btn{
   text-align: center;
-  margin: 20px;
+  padding: 20px;
   a{
     padding: 5px 20px ;
 

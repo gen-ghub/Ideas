@@ -1,7 +1,12 @@
-<body class="user-edit-display back">
+<body class="user-edit-display">
   <div class="hoom-icon">
     <%= link_to root_path do%>
     <%= image_tag 'hoom-icon.png'%>
+    <% end %>
+  </div>
+  <div class="mypage-icon">
+    <%= link_to mypage_path(current_user.id) do%>
+    <%= image_tag 'mypage-icon.png'%>
     <% end %>
   </div>
   <div class="user-edit-wrapper">

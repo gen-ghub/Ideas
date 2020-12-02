@@ -131,8 +131,7 @@ $cBlack:black;
         justify-content: center;
 
         .user-idea-list{
-
-          width: 400px;
+          text-align: center;
           .user-idea-title{
             font-size: 4.3vh;
             color: $cBlack;
@@ -143,6 +142,7 @@ $cBlack:black;
             height: 400px;
             width: 400px;
             object-fit: cover;
+
           }
           .user-idea-text{
             margin-top: 5vh;

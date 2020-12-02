@@ -93,4 +93,26 @@
       </div>
       <% end %>
 
+  <div class="idea-list-wrapper">
+    <div class="idea-list-main">
+      <% @idea.each do |idea| %>
+        <figure class="cp_caption">
+          <%= link_to idea_path(idea.id) do %>
+            <% if idea.image.attached? %>
+              <%= image_tag idea.image %>
+            <% else %>
+              <%= image_tag 'not.png' %>
+            <% end %>
+          <% end %>
+          <figcaption>
+            <%= link_to idea_path(idea.id) do %>
+              <h2><%= idea.title %></h2>
+            <% end %>
+            <p><%= idea.tag.name %></p>
+          </figcaption>
+        </figure>
+      <% end %>
+    </div>
+    </div>
+
     </div>

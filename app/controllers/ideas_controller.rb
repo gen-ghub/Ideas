@@ -4,6 +4,7 @@ class IdeasController < ApplicationController
 
   def index
     @up_idea = Idea.last
+    @idea = Idea.order(created_at: :desc).limit(6)
   end
 
   def new
