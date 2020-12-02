@@ -83,3 +83,23 @@
   text-decoration: none;
   color: #00BCD4;
   }
+.edit-idea-btn{
+  position: absolute;
+  top: 9vh;
+  left: 1vw;
+  img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+  }
+}
+.delete-idea-btn{
+  position: absolute;
+  top: 16vh;
+  left: 1vw;
+  img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+  }
+}

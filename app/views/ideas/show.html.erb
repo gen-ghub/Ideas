@@ -26,5 +26,17 @@
         </div>
       </div>
   </div>
+  <% if user_signed_in? %>
+    <% if @idea.user.id == current_user.id %>
+      <div class="edit-idea-btn">
+        <%= image_tag 'edit-icon.png'%>
+        <%= link_to '投稿の編集', edit_idea_path(@idea.id), method: :get, class: "idea-icon-btn" %>
+      </div>
+      <div class="delete-idea-btn">
+        <%= image_tag 'delete.png'%>
+        <%= link_to '投稿を削除', idea_path(@idea.id), method: :delete, class:'idea-icon-btn' %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
