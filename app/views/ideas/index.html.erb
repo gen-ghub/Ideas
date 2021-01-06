@@ -6,11 +6,13 @@
     <!-- メイン表示部分 -->
     <div class="swiper-wrapper">
       <!-- 各スライド -->
-      <div class="swiper-slide"><%= image_tag "slide.png" %></div>
-      <div class="swiper-slide"><%= image_tag "slide2.png" %></div>
-      <div class="swiper-slide"><%= image_tag "slide3.png" %></div>
-      <div class="swiper-slide"><%= image_tag "slide4.png" %></div>
-      <div class="swiper-slide"><%= image_tag "slide5.png" %></div>
+      <div class="swiper-slide">
+        <%= image_tag "slide1.jpg" %>
+      </div>
+      <div class="swiper-slide"><%= image_tag "slide2.jpg" %></div>
+      <div class="swiper-slide"><%= image_tag "slide3.jpg" %></div>
+      <div class="swiper-slide"><%= image_tag "slide4.jpg" %></div>
+      <%# <div class="swiper-slide"><%= image_tag "slide5.png"</div> %>
     </div>
   </div>
   <%= flash[:user_delete] %>
