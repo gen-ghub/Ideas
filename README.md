@@ -16,7 +16,7 @@
 
 
 ## 使用技術
-- HTTML
+- HTML
 - SCSS
 - Javascript
 - Ruby 2.6.5
